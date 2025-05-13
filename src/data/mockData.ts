@@ -1,0 +1,311 @@
+import { Program, NewsItem, Partner, Course, Product, Service, Location } from '../types';
+
+export const programs: Program[] = [
+  {
+    id: '1',
+    title: 'Entrepreneuriat Agricole',
+    description: 'Formation complète sur les aspects techniques et commerciaux de l\'entrepreneuriat agricole. Apprenez à gérer une exploitation rentable et durable.',
+    duration: '1 mois',
+    cost: '70 000 FCFA',
+    imageUrl: 'https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=600'
+  },
+  {
+    id: '2',
+    title: 'Aviculture Moderne',
+    description: 'Apprenez les techniques modernes d\'élevage de volailles, de la gestion de l\'alimentation aux stratégies de commercialisation des œufs et poulets.',
+    duration: '1 mois',
+    cost: '70 000 FCFA',
+    imageUrl: 'https://images.pexels.com/photos/6862157/pexels-photo-6862157.jpeg?auto=compress&cs=tinysrgb&w=600'
+  },
+  {
+    id: '3',
+    title: 'Agriculture Durable',
+    description: 'Découvrez les pratiques agricoles durables, y compris l\'agroécologie, la conservation des sols et la gestion de l\'eau pour une production respectueuse de l\'environnement.',
+    duration: '1 mois',
+    cost: '70 000 FCFA',
+    imageUrl: 'src/assets/agriculture.jpg'
+  },
+  {
+    id: '4',
+    title: 'Transformation Agroalimentaire',
+    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    duration: '1 mois',
+    cost: '70 000 FCFA',
+    imageUrl: 'src/assets/cacao1.jpg'
+  },
+  {
+    id: '5',
+    title: 'Pisculture Moderne',
+    description: 'Apprenez les techniques modernes d\'élevage, de la gestion de l\'alimentation aux stratégies de commercialisation.',
+    duration: '1 mois',
+    cost: '70 000 FCFA',
+    imageUrl: 'src/assets/piscicultre.jpg'
+  },
+  {
+    id: '6',
+    title: 'Comptabilité et Gestion',
+    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    duration: '1 mois',
+    cost: '260 000 FCFA',
+    imageUrl: 'src/assets/gestion.jpeg'
+  },
+  {
+    id: '7',
+    title: 'Santé Médicale',
+    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    duration: '12 mois',
+    cost: '265 000 FCFA',
+    imageUrl: 'src/assets/sante.jpeg'
+  },
+  {
+    id: '8',
+    title: 'Commerce et Gestion',
+    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    duration: '12 mois',
+    cost: '260 000 FCFA',
+    imageUrl: 'src/assets/gestion.jpeg'
+  },
+  {
+    id: '9',
+    title: 'Technologie',
+    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    duration: '12 mois',
+    cost: '350 000 FCFA',
+    imageUrl: 'src/assets/techno.jpeg'
+  },
+  {
+    id: '10',
+    title: 'Departement Professionnel',
+    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    duration: '12 mois',
+    cost: '265 000 FCFA',
+    imageUrl: 'https://images.pexels.com/photos/8105035/pexels-photo-8105035.jpeg?auto=compress&cs=tinysrgb&w=600'
+  },
+];
+
+export const newsItems: NewsItem[] = [
+  {
+    id: '1',
+    title: 'Inauguration du nouveau centre de formation à Yamoussoukro',
+    excerpt: 'Le CIAPO COOP-CA renforce sa présence avec un nouveau centre ultramoderne',
+    content: 'Le CIAPO COOP-CA a inauguré son nouveau centre de formation agricole à Yamoussoukro. Équipé des dernières technologies, ce centre permettra de former plus de 200 jeunes agriculteurs par an aux techniques agricoles modernes et à l\'entrepreneuriat.',
+    date: '2025-02-15',
+    category: 'Évènements',
+    imageUrl: 'https://images.pexels.com/photos/2147219/pexels-photo-2147219.jpeg?auto=compress&cs=tinysrgb&w=600',
+    author: 'Admin CIAPO'
+  },
+  {
+    id: '2',
+    title: 'Remise de certificats à 50 nouveaux entrepreneurs agricoles',
+    excerpt: 'Une nouvelle génération d\'agriculteurs prête à transformer le secteur',
+    content: 'Lors d\'une cérémonie officielle à Abidjan, 50 jeunes formés par le CIAPO COOP-CA ont reçu leurs certificats d\'entrepreneur agricole. Ces jeunes ont déjà commencé à mettre en œuvre leurs projets agricoles dans diverses régions du pays.',
+    date: '2025-01-30',
+    category: 'Succès',
+    imageUrl: 'https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=600',
+    author: 'Admin CIAPO'
+  },
+  {
+    id: '3',
+    title: 'Nouvelle technique d\'irrigation économe en eau adoptée par nos centres',
+    excerpt: 'Innovation durable pour faire face aux défis climatiques',
+    content: 'Le CIAPO COOP-CA a adopté une nouvelle technique d\'irrigation goutte-à-goutte qui permet d\'économiser jusqu\'à 60% d\'eau par rapport aux méthodes traditionnelles. Cette technique est désormais enseignée dans tous nos programmes de formation.',
+    date: '2025-01-10',
+    category: 'Innovation',
+    imageUrl: 'https://images.pexels.com/photos/2132141/pexels-photo-2132141.jpeg?auto=compress&cs=tinysrgb&w=600',
+    author: 'Admin CIAPO'
+  }
+];
+
+export const partners: Partner[] = [
+  {
+    id: '1',
+    name: 'Ministère de l\'Agriculture',
+    description: 'Partenaire institutionnel soutenant nos programmes de formation',
+    logoUrl: 'https://placehold.co/200x100/png?text=Min.+Agriculture',
+    website: 'https://agriculture.gouv.ci'
+  },
+  {
+    id: '2',
+    name: 'Banque Africaine de Développement',
+    description: 'Soutien financier pour nos projets d\'expansion',
+    logoUrl: 'https://placehold.co/200x100/png?text=BAD',
+    website: 'https://www.afdb.org'
+  },
+  {
+    id: '3',
+    name: 'Organisation des Nations Unies pour l\'alimentation et l\'agriculture (FAO)',
+    description: 'Partenaire technique pour les méthodes agricoles durables',
+    logoUrl: 'https://placehold.co/200x100/png?text=FAO',
+    website: 'https://www.fao.org'
+  },
+  {
+    id: '4',
+    name: 'Cohimms Anglo Saxon Universite Professionnelle De Douala',
+    description: 'Partenaire de formation universitaire',
+    logoUrl: 'src/assets/COHIMMS.png',
+    website: 'https://www.cohimms.org'
+  }
+];
+
+export const courses: Course[] = [
+  {
+    id: '1',
+    title: 'Introduction à l\'Entrepreneuriat Agricole',
+    description: 'Ce cours en ligne couvre les bases de l\'entrepreneuriat dans le secteur agricole, avec un focus sur l\'analyse de marché et la planification d\'affaires.',
+    level: 'Débutant',
+    duration: '4 semaines',
+    instructor: 'Dr. Kouamé Akissi',
+    imageUrl: 'https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=600',
+    modules: 6,
+    enrolledStudents: 120
+  },
+  {
+    id: '2',
+    title: 'Techniques Avancées d\'Aviculture',
+    description: 'Approfondissez vos connaissances en élevage de volailles avec ce cours couvrant la nutrition, la santé animale et les installations modernes.',
+    level: 'Intermédiaire',
+    duration: '6 semaines',
+    instructor: 'Prof. Bakayoko Mamadou',
+    imageUrl: 'https://images.pexels.com/photos/6862157/pexels-photo-6862157.jpeg?auto=compress&cs=tinysrgb&w=600',
+    modules: 8,
+    enrolledStudents: 85
+  },
+  {
+    id: '3',
+    title: 'Gestion Financière pour Agriculteurs',
+    description: 'Apprenez à gérer les finances de votre exploitation agricole, y compris la comptabilité de base, la budgétisation et l\'accès au crédit.',
+    level: 'Tous niveaux',
+    duration: '5 semaines',
+    instructor: 'Mme. Touré Fatou',
+    imageUrl: 'https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=600',
+    modules: 7,
+    enrolledStudents: 98
+  }
+];
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Poulets de Chair',
+    description: 'Poulets de chair élevés naturellement, sans antibiotiques',
+    price: 3000,
+    unit: 'pièce',
+    category: 'Volaille',
+    imageUrl: 'https://images.pexels.com/photos/6862157/pexels-photo-6862157.jpeg?auto=compress&cs=tinysrgb&w=600',
+    seller: {
+      id: '101',
+      name: 'Ferme Avicole Kouassi',
+      location: 'Bingerville',
+      rating: 4.8
+    },
+    available: true
+  },
+  {
+    id: '2',
+    name: 'Tomates Bio',
+    description: 'Tomates cultivées sans pesticides chimiques',
+    price: 1500,
+    unit: 'kg',
+    category: 'Légumes',
+    imageUrl: 'https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=600',
+    seller: {
+      id: '102',
+      name: 'Coopérative Maraîchère d\'Anyama',
+      location: 'Anyama',
+      rating: 4.5
+    },
+    available: true
+  },
+  {
+    id: '3',
+    name: 'Miel Naturel',
+    description: 'Miel pur récolté dans les forêts du centre-ouest',
+    price: 4000,
+    unit: 'litre',
+    category: 'Produits transformés',
+    imageUrl: 'https://images.pexels.com/photos/1532704/pexels-photo-1532704.jpeg?auto=compress&cs=tinysrgb&w=600',
+    seller: {
+      id: '103',
+      name: 'Apiculteurs de Daloa',
+      location: 'Daloa',
+      rating: 4.9
+    },
+    available: true
+  }
+];
+
+export const services: Service[] = [
+  {
+    id: '1',
+    title: 'Location de Tracteur',
+    description: 'Location de tracteur avec chauffeur pour labour et préparation des sols',
+    price: 25000,
+    provider: {
+      id: '201',
+      name: 'Agri-Services Plus',
+      location: 'Bouaké',
+      rating: 4.7
+    },
+    category: 'Équipement',
+    imageUrl: 'https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=600'
+  },
+  {
+    id: '2',
+    title: 'Conseil en Certification Bio',
+    description: 'Services de consultation pour l\'obtention de certifications biologiques',
+    price: 50000,
+    provider: {
+      id: '202',
+      name: 'Bio-Cert Consulting',
+      location: 'Abidjan',
+      rating: 4.6
+    },
+    category: 'Conseil',
+    imageUrl: 'https://images.pexels.com/photos/7599735/pexels-photo-7599735.jpeg?auto=compress&cs=tinysrgb&w=600'
+  }
+];
+
+export const locations: Location[] = [
+  {
+    id: '1',
+    name: 'Siège CIAPO COOP-CA',
+    address: 'Mvan Essakoe',
+    city: 'Ebolowa',
+    region: 'Sud Cameroun',
+    coordinates: {
+      lat: 5.341,
+      lng: -4.024
+    },
+    type: 'headquarters',
+    phone: '+237 652 498 313',
+    email: 'ciapocoopca@gmail.com'
+  },
+  {
+    id: '2',
+    name: 'Centre de Formation Agricole',
+    address: 'Mvan Essakoe',
+    city: 'Ebolowa',
+    region: 'Sud Cameroun',
+    coordinates: {
+      lat: 5.350,
+      lng: -3.885
+    },
+    type: 'training-center',
+    phone: '+237 652 498 313',
+    email: 'formation@ciapo-coop-ca.org'
+  },
+  {
+    id: '3',
+    name: 'Centre de Formation COHIMMS',
+    address: 'Douala',
+    city: 'Douala',
+    region: 'Cameroun',
+    coordinates: {
+      lat: 6.827,
+      lng: -5.289
+    },
+    type: 'training-center',
+    phone: '+237 652 498 313',
+    email: 'cohimms@ciapo-coop-ca.org'
+  }
+];
