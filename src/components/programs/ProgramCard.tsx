@@ -39,7 +39,7 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ program, delay = 0 }) => {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center text-neutral-500">
             <Calendar size={18} className="mr-2" />
-            <span>Prochaine session: Mars 2025</span>
+            <span>Prochaine session: Juin 2025</span>
           </div>
           <div className="flex items-center text-neutral-500">
             <Users size={18} className="mr-2" />

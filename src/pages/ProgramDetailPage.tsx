@@ -207,6 +207,23 @@ const ProgramDetailPage: React.FC = () => {
                     <span>Stage pratique inclus</span>
                   </div>
                 </div>
+
+                
+                <div className="space-y-4 mb-6">
+                <p className="text-neutral-600">Avantages</p>
+                  <div className="flex items-center">
+                    <CheckCircle2 size={18} className="text-primary-600 mr-3" />
+                    <span>Assurance risque inclu</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle2 size={18} className="text-primary-600 mr-3" />
+                    <span>Déjeuner offert</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle2 size={18} className="text-primary-600 mr-3" />
+                    <span>Possibilité d'auto-emploi ou entreprenariat</span>
+                  </div>
+                </div>
                 
                 <button className="button-primary w-full mb-4">
                   S'inscrire à la formation

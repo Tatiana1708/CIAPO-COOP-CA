@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, ChevronRight, ChevronDown } from 'lucide-react';
 import { locations } from '../data/mockData';
+import gicambyLogo from '../assets/GICAMBY.png';
+import apiLogo from '../assets/API.png';
+import cohimmsLogo from '../assets/COHIMMS.png';
+import scptteLogo from '../assets/SCPTTE.png';
 
 const ContactPage: React.FC = () => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
@@ -221,7 +225,7 @@ const ContactPage: React.FC = () => {
                     <Phone size={20} className="text-primary-600 mr-3 mt-1" />
                     <div>
                       <h4 className="font-medium mb-1">Téléphone</h4>
-                      <p className="text-neutral-600">+237 652 498 313</p>
+                      <p className="text-neutral-600">+237 652 498 313 / +237 621 752 020</p>
                     </div>
                   </div>
 
@@ -246,7 +250,56 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
             </motion.div>
+
+            
           </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="lg:col-span-3 mt-6"
+            >
+              <div className="bg-neutral-50 p-6 rounded-lg h-full">
+                <h3 className="text-xl font-semibold mb-6">Filiales et partenaires </h3>
+                
+                <div className="flex flex-wrap">
+                  <div className="flex items-center">
+                    <img 
+                      src={gicambyLogo}
+                      className="w-16 h-16 object-cover rounded-full mr-3"
+                      alt='logo' 
+                    />
+                  </div>
+
+                  <div className="flex items-center">
+                    <img 
+                      src={apiLogo}
+                      className="w-16 h-16 object-cover rounded-full mr-3"
+                      alt='logo' 
+                    />
+                  </div>
+
+                  <div className="flex items-center">
+                    <img 
+                      src={scptteLogo}
+                      className="w-16 h-16 object-cover rounded-full mr-3"
+                      alt='logo' 
+                    />
+                  </div>
+
+                  <div className="flex items-center">
+                    <img 
+                      src={cohimmsLogo}
+                      className="w-16 h-16 object-cover rounded-full mr-3"
+                      alt='logo' 
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            </div>
         </div>
       </section>
 

@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Formez-vous aux métiers de l'agriculture moderne
+            Formez-vous aux métiers de l'Agriculture moderne
           </motion.h1>
           
           <motion.p 

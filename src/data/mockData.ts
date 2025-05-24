@@ -1,4 +1,16 @@
 import { Program, NewsItem, Partner, Course, Product, Service, Location } from '../types';
+import Aviculture from '../assets/elevage.jpg';
+import Agriculture from '../assets/agriculture.jpg';
+import Agroalimentaire from '../assets/transform_cacao.png';
+import Pisculture from '../assets/piscicultre.jpg';
+import Comptabilité from '../assets/gestion.jpeg';
+import Santé from '../assets/sante.jpeg';
+import Commerce from '../assets/gestion.jpeg';
+import Technologie from '../assets/techno.jpeg';
+import Professionnel from '../assets/professionnelle.jpg';
+import elevageImage from '../assets/elevage.jpg';
+import tomateImage from '../assets/tomates.jpg';
+import mielImage from '../assets/miel.jpg';
 
 export const programs: Program[] = [
   {
@@ -15,7 +27,7 @@ export const programs: Program[] = [
     description: 'Apprenez les techniques modernes d\'élevage de volailles, de la gestion de l\'alimentation aux stratégies de commercialisation des œufs et poulets.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: 'https://images.pexels.com/photos/6862157/pexels-photo-6862157.jpeg?auto=compress&cs=tinysrgb&w=600'
+    imageUrl: Aviculture
   },
   {
     id: '3',
@@ -23,7 +35,7 @@ export const programs: Program[] = [
     description: 'Découvrez les pratiques agricoles durables, y compris l\'agroécologie, la conservation des sols et la gestion de l\'eau pour une production respectueuse de l\'environnement.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: 'src/assets/agriculture.jpg'
+    imageUrl: Agriculture
   },
   {
     id: '4',
@@ -31,7 +43,7 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: 'src/assets/cacao1.jpg'
+    imageUrl: Agroalimentaire
   },
   {
     id: '5',
@@ -39,7 +51,7 @@ export const programs: Program[] = [
     description: 'Apprenez les techniques modernes d\'élevage, de la gestion de l\'alimentation aux stratégies de commercialisation.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: 'src/assets/piscicultre.jpg'
+    imageUrl: Pisculture
   },
   {
     id: '6',
@@ -47,7 +59,7 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '1 mois',
     cost: '260 000 FCFA',
-    imageUrl: 'src/assets/gestion.jpeg'
+    imageUrl: Comptabilité
   },
   {
     id: '7',
@@ -55,7 +67,7 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '265 000 FCFA',
-    imageUrl: 'src/assets/sante.jpeg'
+    imageUrl: Santé
   },
   {
     id: '8',
@@ -63,7 +75,7 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '260 000 FCFA',
-    imageUrl: 'src/assets/gestion.jpeg'
+    imageUrl: Commerce
   },
   {
     id: '9',
@@ -71,27 +83,27 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '350 000 FCFA',
-    imageUrl: 'src/assets/techno.jpeg'
+    imageUrl: Technologie
   },
   {
     id: '10',
-    title: 'Departement Professionnel',
+    title: 'Département Professionnel',
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '265 000 FCFA',
-    imageUrl: 'https://images.pexels.com/photos/8105035/pexels-photo-8105035.jpeg?auto=compress&cs=tinysrgb&w=600'
+    imageUrl: Professionnel
   },
 ];
 
 export const newsItems: NewsItem[] = [
   {
     id: '1',
-    title: 'Inauguration du nouveau centre de formation à Yamoussoukro',
+    title: 'Inauguration du nouveau restaurant bar services à Ebolowa',
     excerpt: 'Le CIAPO COOP-CA renforce sa présence avec un nouveau centre ultramoderne',
     content: 'Le CIAPO COOP-CA a inauguré son nouveau centre de formation agricole à Yamoussoukro. Équipé des dernières technologies, ce centre permettra de former plus de 200 jeunes agriculteurs par an aux techniques agricoles modernes et à l\'entrepreneuriat.',
-    date: '2025-02-15',
+    date: '2025-05-30',
     category: 'Évènements',
-    imageUrl: 'https://images.pexels.com/photos/2147219/pexels-photo-2147219.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: 'src/assets/restau.jpeg',
     author: 'Admin CIAPO'
   },
   {
@@ -99,7 +111,7 @@ export const newsItems: NewsItem[] = [
     title: 'Remise de certificats à 50 nouveaux entrepreneurs agricoles',
     excerpt: 'Une nouvelle génération d\'agriculteurs prête à transformer le secteur',
     content: 'Lors d\'une cérémonie officielle à Abidjan, 50 jeunes formés par le CIAPO COOP-CA ont reçu leurs certificats d\'entrepreneur agricole. Ces jeunes ont déjà commencé à mettre en œuvre leurs projets agricoles dans diverses régions du pays.',
-    date: '2025-01-30',
+    date: '2025-12-30',
     category: 'Succès',
     imageUrl: 'https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=600',
     author: 'Admin CIAPO'
@@ -111,7 +123,7 @@ export const newsItems: NewsItem[] = [
     content: 'Le CIAPO COOP-CA a adopté une nouvelle technique d\'irrigation goutte-à-goutte qui permet d\'économiser jusqu\'à 60% d\'eau par rapport aux méthodes traditionnelles. Cette technique est désormais enseignée dans tous nos programmes de formation.',
     date: '2025-01-10',
     category: 'Innovation',
-    imageUrl: 'https://images.pexels.com/photos/2132141/pexels-photo-2132141.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: 'src/assets/systeme-irrigation.png',
     author: 'Admin CIAPO'
   }
 ];
@@ -144,6 +156,27 @@ export const partners: Partner[] = [
     description: 'Partenaire de formation universitaire',
     logoUrl: 'src/assets/COHIMMS.png',
     website: 'https://www.cohimms.org'
+  },
+  {
+    id: '5',
+    name: 'Société Camerounaises des Postes Télécommunications et Travaux Electrique (SCPTTE Sarl)',
+    description: 'Partenaire technique pour les installations électriques',
+    logoUrl: 'src/assets/SCPTTE.png',
+    website: 'https://www.scpttesarl.org'
+  },
+  {
+    id: '6',
+    name: 'Groupe Initiative comme des Agriculteurs de Yemyema\'a (GIC ABMY)',
+    description: 'Partenaire soutenant les projets agricoles ',
+    logoUrl: 'src/assets/GICAMBY.png',
+    website: 'https://www.gicamby.org'
+  },
+  {
+    id: '7',
+    name: 'Afripionnier Investissements Sarl (API)',
+    description: 'Partenaire financier pour les projets agricoles',
+    logoUrl: 'src/assets/API.png',
+    website: 'https://www.apisarl.org'
   }
 ];
 
@@ -191,7 +224,7 @@ export const products: Product[] = [
     price: 3000,
     unit: 'pièce',
     category: 'Volaille',
-    imageUrl: 'https://images.pexels.com/photos/6862157/pexels-photo-6862157.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: elevageImage,
     seller: {
       id: '101',
       name: 'Ferme Avicole Kouassi',
@@ -207,7 +240,7 @@ export const products: Product[] = [
     price: 1500,
     unit: 'kg',
     category: 'Légumes',
-    imageUrl: 'https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: tomateImage,
     seller: {
       id: '102',
       name: 'Coopérative Maraîchère d\'Anyama',
@@ -223,7 +256,7 @@ export const products: Product[] = [
     price: 4000,
     unit: 'litre',
     category: 'Produits transformés',
-    imageUrl: 'https://images.pexels.com/photos/1532704/pexels-photo-1532704.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: mielImage,
     seller: {
       id: '103',
       name: 'Apiculteurs de Daloa',
@@ -277,7 +310,7 @@ export const locations: Location[] = [
       lng: -4.024
     },
     type: 'headquarters',
-    phone: '+237 652 498 313',
+    phone: '+237 652 498 313 / +237 621 752 020',
     email: 'ciapocoopca@gmail.com'
   },
   {
@@ -291,7 +324,7 @@ export const locations: Location[] = [
       lng: -3.885
     },
     type: 'training-center',
-    phone: '+237 652 498 313',
+    phone: '+237 652 498 313 / +237 621 752 020',
     email: 'formation@ciapo-coop-ca.org'
   },
   {
@@ -305,7 +338,7 @@ export const locations: Location[] = [
       lng: -5.289
     },
     type: 'training-center',
-    phone: '+237 652 498 313',
+    phone: '+237 652 498 313 / +237 621 752 020',
     email: 'cohimms@ciapo-coop-ca.org'
   }
 ];

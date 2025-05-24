@@ -42,7 +42,8 @@ const PlatformsPreview: React.FC = () => {
                 ))}
               </ul>
               
-              <Link to="/elearning" className="button bg-white text-primary-700 hover:bg-neutral-100 group-hover:translate-y-0 translate-y-0 transition-transform">
+              {/* <Link to="/elearning" className="button bg-white text-primary-700 hover:bg-neutral-100 group-hover:translate-y-0 translate-y-0 transition-transform"> */}
+              <Link to="" className="button bg-white text-primary-700 hover:bg-neutral-100 group-hover:translate-y-0 translate-y-0 transition-transform">
                 Accéder à la plateforme
                 <ArrowRight size={18} className="ml-1" />
               </Link>

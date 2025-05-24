@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
       <Hero />
       <ProgramHighlights />
       <PlatformsPreview />
-      <LatestNews />
+      {/* <LatestNews /> */}
       <Partners />
       <CallToAction />
     </div>
