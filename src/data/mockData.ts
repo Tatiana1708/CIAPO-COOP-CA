@@ -13,6 +13,7 @@ import tomateImage from '../assets/tomates.jpg';
 import mielImage from '../assets/miel.jpg';
 import COHIMMSlogo from '../assets/COHIMMS.png';
 import SCPTTElogo from '../assets/SCPTTE.png';
+import GICAMBYlogo from '../assets/GICAMBY.png';
 import APIlogo from '../assets/API.png';
 import restau from '../assets/restau.jpeg';
 import irrigation from '../assets/systeme-irrigation.png';
@@ -187,7 +188,7 @@ export const partners: Partner[] = [
     id: '6',
     name: 'Groupe Initiative comme des Agriculteurs de Yemyema\'a (GIC ABMY)',
     description: 'Partenaire soutenant les projets agricoles ',
-    logoUrl: 'src/assets/GICAMBY.png',
+    logoUrl: GICAMBYlogo,
     website: 'https://www.gicamby.org'
   },
   {
