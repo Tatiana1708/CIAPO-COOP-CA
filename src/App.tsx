@@ -16,6 +16,8 @@ import SellerProfilePage from './pages/marketplace/SellerProfilePage';
 import CourseListPage from './pages/elearning/CourseListPage';
 import CourseDetailPage from './pages/elearning/CourseDetailPage';
 import StudentDashboardPage from './pages/elearning/StudentDashboardPage';
+import NewsPage from './pages/NewsPage';
+import NewsDetailPage from './pages/NewsDetailPage';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
             <Route path="/elearning/courses" element={<CourseListPage />} />
             <Route path="/elearning/courses/:id" element={<CourseDetailPage />} />
             <Route path="/elearning/dashboard" element={<StudentDashboardPage />} />
+            <Route path="/news" element={<NewsPage />} />
+            <Route path="/news/:id" element={<NewsDetailPage />} />
           </Routes>
         </main>
         <Footer />

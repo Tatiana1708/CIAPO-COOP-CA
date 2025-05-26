@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/home/Hero';
 import ProgramHighlights from '../components/home/ProgramHighlights';
 import PlatformsPreview from '../components/home/PlatformsPreview';
+import AdminTeam from '../components/home/AdminTeam';
 import LatestNews from '../components/home/LatestNews';
 import Partners from '../components/home/Partners';
 import CallToAction from '../components/home/CallToAction';
@@ -17,6 +18,7 @@ const HomePage: React.FC = () => {
       <Hero />
       <ProgramHighlights />
       <PlatformsPreview />
+      <AdminTeam />
       {/* <LatestNews /> */}
       <Partners />
       <CallToAction />

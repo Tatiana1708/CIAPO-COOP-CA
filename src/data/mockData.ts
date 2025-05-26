@@ -11,6 +11,11 @@ import Professionnel from '../assets/professionnelle.jpg';
 import elevageImage from '../assets/elevage.jpg';
 import tomateImage from '../assets/tomates.jpg';
 import mielImage from '../assets/miel.jpg';
+import COHIMMSlogo from '../assets/COHIMMS.png';
+import SCPTTElogo from '../assets/SCPTTE.png';
+import APIlogo from '../assets/API.png';
+import restau from '../assets/restau.jpeg';
+import irrigation from '../assets/systeme-irrigation.png';
 
 export const programs: Program[] = [
   {
@@ -103,7 +108,7 @@ export const newsItems: NewsItem[] = [
     content: 'Le CIAPO COOP-CA a inauguré son nouveau centre de formation agricole à Yamoussoukro. Équipé des dernières technologies, ce centre permettra de former plus de 200 jeunes agriculteurs par an aux techniques agricoles modernes et à l\'entrepreneuriat.',
     date: '2025-05-30',
     category: 'Évènements',
-    imageUrl: 'src/assets/restau.jpeg',
+    imageUrl: restau,
     author: 'Admin CIAPO'
   },
   {
@@ -123,9 +128,23 @@ export const newsItems: NewsItem[] = [
     content: 'Le CIAPO COOP-CA a adopté une nouvelle technique d\'irrigation goutte-à-goutte qui permet d\'économiser jusqu\'à 60% d\'eau par rapport aux méthodes traditionnelles. Cette technique est désormais enseignée dans tous nos programmes de formation.',
     date: '2025-01-10',
     category: 'Innovation',
-    imageUrl: 'src/assets/systeme-irrigation.png',
+    imageUrl: irrigation,
     author: 'Admin CIAPO'
-  }
+  },
+  {
+    id: "4",
+    title: "C1APO COOP-CA - Produits locaux et services traiteur",
+    excerpt: "Découvrez nos produits préparés et non préparés, ainsi que nos services de formation et traiteur",
+    content: "Le C1APO COOP-CA propose une gamme variée de produits locaux, incluant des plats cuisinés bio, des conserves artisanales, des jus naturels ainsi que des matières premières agricoles brutes. Nous offrons également des services traiteur pour événements et des formations pratiques sur la transformation des produits agricoles, l'hygiène alimentaire et le marketing. Nos produits sont disponibles sur les marchés locaux, en ligne et dans des boutiques partenaires.",
+    date: "2025-05-25",
+    category: "Évènements",
+    imageUrl: "whatsapp_image_2025-05-25_at_20.12.29.jpeg",
+    author: "Équipe C1APO",
+    // "contact": {
+    //     "phone1": "652 49 83 13",
+    //     "phone2": "621 75 20 20"
+    // }
+}
 ];
 
 export const partners: Partner[] = [
@@ -154,14 +173,14 @@ export const partners: Partner[] = [
     id: '4',
     name: 'Cohimms Anglo Saxon Universite Professionnelle De Douala',
     description: 'Partenaire de formation universitaire',
-    logoUrl: 'src/assets/COHIMMS.png',
+    logoUrl: COHIMMSlogo,
     website: 'https://www.cohimms.org'
   },
   {
     id: '5',
     name: 'Société Camerounaises des Postes Télécommunications et Travaux Electrique (SCPTTE Sarl)',
     description: 'Partenaire technique pour les installations électriques',
-    logoUrl: 'src/assets/SCPTTE.png',
+    logoUrl: SCPTTElogo,
     website: 'https://www.scpttesarl.org'
   },
   {
@@ -175,7 +194,7 @@ export const partners: Partner[] = [
     id: '7',
     name: 'Afripionnier Investissements Sarl (API)',
     description: 'Partenaire financier pour les projets agricoles',
-    logoUrl: 'src/assets/API.png',
+    logoUrl: APIlogo,
     website: 'https://www.apisarl.org'
   }
 ];
