@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronRight, Calendar, Clock, Users, MapPin, CheckCircle2 } from 'lucide-react';
 import { programs } from '../data/mockData';
+import PdfViewer from './brochureView';
+
 
 const ProgramDetailPage: React.FC = () => {
   const { id } = useParams();
   const program = programs.find(p => p.id === id);
+  const [showPdfPreview, setShowPdfPreview] = useState(false);
 
   React.useEffect(() => {
     if (program) {
@@ -225,13 +228,30 @@ const ProgramDetailPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <button className="button-primary w-full mb-4">
+                <button className="button-primary w-full mb-4" >
                   S'inscrire à la formation
                 </button>
                 
-                <button className="button-outline w-full">
+                <button className="button-outline w-full" onClick={() => setShowPdfPreview(true)}>
                   Télécharger la brochure
                 </button>
+                
+                {showPdfPreview && (
+                  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-4">
+                      <button 
+                        onClick={() => setShowPdfPreview(false)}
+                        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                      >
+                        ✕
+                      </button>
+                      <PdfViewer 
+                        pdfUrl={program.pdfUrl} 
+                        showFileInput={false} 
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             </motion.div>
           </div>

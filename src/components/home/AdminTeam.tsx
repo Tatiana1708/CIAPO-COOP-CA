@@ -23,6 +23,16 @@ const AdminTeam: React.FC = () => {
        location: 'Ebolowa, Sud Cameroun'
     },
     {
+      name: 'Mme. Evina Marie Noëlle E. ',
+      role: ' Présidente Du Conseil De Surveillance',
+      image: marie,
+      bio: 'Présidente De Surveillance Conseil D\'administration à CIAPO ',
+      email: 'technique@ciapo-coop-ca.org',
+      phone: '+237 652 498 313',
+      linkedin: 'https://linkedin.com',
+       location: 'Ebolowa, Sud Cameroun'
+    },
+    {
       name: 'Mme. Ngo Kona Sandrine',
       role: 'Secrétaire Générale ',
       image: sandrine,
@@ -52,17 +62,6 @@ const AdminTeam: React.FC = () => {
       linkedin: 'https://linkedin.com',
        location: 'Bafoussam, Ouest Cameroun'
     },
-    {
-      name: 'Mme. Evina Marie Noëlle E. ',
-      role: 'Présidente De Surveillance Conseil D\'administration ',
-      image: marie,
-      bio: 'Présidente De Surveillance Conseil D\'administration à CIAPO ',
-      email: 'technique@ciapo-coop-ca.org',
-      phone: '+237 652 498 313',
-      linkedin: 'https://linkedin.com',
-       location: 'Ebolowa, Sud Cameroun'
-    },
-
     {
       name: 'Mme. Kowssima Marly Yaya ',
       role: 'Prestataire indépendante',

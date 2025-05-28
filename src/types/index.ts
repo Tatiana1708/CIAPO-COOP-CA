@@ -5,6 +5,7 @@ export interface Program {
   duration: string;
   cost: string;
   imageUrl: string;
+  pdfUrl: string;
 }
 
 export interface NewsItem {

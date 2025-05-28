@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
@@ -21,17 +21,20 @@ const Footer: React.FC = () => {
               CIAPO COOP-CA est une institution dédiée à la formation des jeunes entrepreneurs agricoles et au développement du secteur agricole au cameroun.
             </p>
             <div className="flex space-x-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
+              <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
+              <a href="https://x.com/home?lang=fr" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
                 <Twitter size={18} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
+              <a href="https://www.youtube.com/watch?v=3EYAWK7M-uk" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
                 <Youtube size={18} />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-neutral-700 hover:bg-primary-600 transition-colors">
+                <Linkedin size={18} />
               </a>
             </div>
           </div>

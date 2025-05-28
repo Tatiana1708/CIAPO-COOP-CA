@@ -15,6 +15,9 @@ import COHIMMSlogo from '../assets/COHIMMS.png';
 import SCPTTElogo from '../assets/SCPTTE.png';
 import GICAMBYlogo from '../assets/GICAMBY.png';
 import APIlogo from '../assets/API.png';
+import MINADER from '../assets/MINADER.jpeg';
+import FAO from '../assets/FAO.jpeg';
+import BAD from '../assets/BAD.jpeg';
 import restau from '../assets/restau.jpeg';
 import irrigation from '../assets/systeme-irrigation.png';
 
@@ -25,7 +28,8 @@ export const programs: Program[] = [
     description: 'Formation complète sur les aspects techniques et commerciaux de l\'entrepreneuriat agricole. Apprenez à gérer une exploitation rentable et durable.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: 'https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=600'
+    imageUrl: 'https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=600',
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '2',
@@ -33,7 +37,8 @@ export const programs: Program[] = [
     description: 'Apprenez les techniques modernes d\'élevage de volailles, de la gestion de l\'alimentation aux stratégies de commercialisation des œufs et poulets.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: Aviculture
+    imageUrl: Aviculture,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '3',
@@ -41,7 +46,8 @@ export const programs: Program[] = [
     description: 'Découvrez les pratiques agricoles durables, y compris l\'agroécologie, la conservation des sols et la gestion de l\'eau pour une production respectueuse de l\'environnement.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: Agriculture
+    imageUrl: Agriculture,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '4',
@@ -49,7 +55,8 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: Agroalimentaire
+    imageUrl: Agroalimentaire,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '5',
@@ -57,7 +64,8 @@ export const programs: Program[] = [
     description: 'Apprenez les techniques modernes d\'élevage, de la gestion de l\'alimentation aux stratégies de commercialisation.',
     duration: '1 mois',
     cost: '70 000 FCFA',
-    imageUrl: Pisculture
+    imageUrl: Pisculture,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '6',
@@ -65,7 +73,8 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '1 mois',
     cost: '260 000 FCFA',
-    imageUrl: Comptabilité
+    imageUrl: Comptabilité,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '7',
@@ -73,7 +82,8 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '265 000 FCFA',
-    imageUrl: Santé
+    imageUrl: Santé,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '8',
@@ -81,7 +91,8 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '260 000 FCFA',
-    imageUrl: Commerce
+    imageUrl: Commerce,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '9',
@@ -89,7 +100,8 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '350 000 FCFA',
-    imageUrl: Technologie
+    imageUrl: Technologie,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
   {
     id: '10',
@@ -97,7 +109,8 @@ export const programs: Program[] = [
     description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '12 mois',
     cost: '265 000 FCFA',
-    imageUrl: Professionnel
+    imageUrl: Professionnel,
+    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
   },
 ];
 
@@ -153,21 +166,21 @@ export const partners: Partner[] = [
     id: '1',
     name: 'Ministère de l\'Agriculture',
     description: 'Partenaire institutionnel soutenant nos programmes de formation',
-    logoUrl: 'https://placehold.co/200x100/png?text=Min.+Agriculture',
-    website: 'https://agriculture.gouv.ci'
+    logoUrl: MINADER,
+    website: 'https://www.minader.cm/'
   },
   {
     id: '2',
     name: 'Banque Africaine de Développement',
     description: 'Soutien financier pour nos projets d\'expansion',
-    logoUrl: 'https://placehold.co/200x100/png?text=BAD',
+    logoUrl: BAD,
     website: 'https://www.afdb.org'
   },
   {
     id: '3',
     name: 'Organisation des Nations Unies pour l\'alimentation et l\'agriculture (FAO)',
     description: 'Partenaire technique pour les méthodes agricoles durables',
-    logoUrl: 'https://placehold.co/200x100/png?text=FAO',
+    logoUrl: FAO,
     website: 'https://www.fao.org'
   },
   {
