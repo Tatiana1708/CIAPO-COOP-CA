@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            CIAPO COOP-CA accompagne les jeunes entrepreneurs vers l'excellence agricole à travers des formations techniques et pratiques adaptées aux besoins du marché.
+            CIAPO COOP-CA accompagne les jeunes entrepreneurs vers l'excellence agricole à travers des formations d'amélioration professionnelle, d'orientation en création d'entreprise, de prestations de services diversifiées et accès à l'emploi.
           </motion.p>
           
           <motion.div 

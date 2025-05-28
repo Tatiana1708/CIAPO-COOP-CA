@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Document, Page } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 import { motion } from 'framer-motion';
 import { ChevronRight, Calendar, Clock, Users, MapPin, CheckCircle2 } from 'lucide-react';
 import { programs } from '../data/mockData';
-import PdfViewer from './brochureView';
+import Modal from '../components/programs/Modal';
 
+// Configure PDF.js worker
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const ProgramDetailPage: React.FC = () => {
   const { id } = useParams();
   const program = programs.find(p => p.id === id);
-  const [showPdfPreview, setShowPdfPreview] = useState(false);
+  const [showBrochure, setShowBrochure] = useState(false);
+  const [numPages, setNumPages] = useState<number | null>(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    setNumPages(numPages);
+  }
 
   React.useEffect(() => {
     if (program) {
@@ -232,31 +244,49 @@ const ProgramDetailPage: React.FC = () => {
                   S'inscrire à la formation
                 </button>
                 
-                <button className="button-outline w-full" onClick={() => setShowPdfPreview(true)}>
+                <button className="button-outline w-full" onClick={() => setShowBrochure(true)}>
                   Télécharger la brochure
                 </button>
-                
-                {showPdfPreview && (
-                  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                    <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto p-4">
-                      <button 
-                        onClick={() => setShowPdfPreview(false)}
-                        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-                      >
-                        ✕
-                      </button>
-                      <PdfViewer 
-                        pdfUrl={program.pdfUrl} 
-                        showFileInput={false} 
-                      />
-                    </div>
-                  </div>
-                )}
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+      <Modal
+        isOpen={showBrochure}
+        onClose={() => setShowBrochure(false)}
+        title="Brochure de Formation"
+      >
+        <div className="aspect-[210/297] bg-white">
+          {program?.pdfUrl ? (
+            // <iframe
+            //   src={`https://docs.google.com/viewer?url=${encodeURIComponent("../assets/teams/BROCHURE_AVICULTURE.pdf")}&embedded=true`}
+            //   className="w-full h-full min-h-[600px] border-0"
+            //   title={`Brochure du programme: ${program.title || 'Document'}`}
+            //   loading="lazy"
+            // />
+            <iframe
+              src={`${program.pdfUrl}`}
+              className="w-full h-[600px]"
+              title="PDF Viewer"
+            />
+          ) : (
+            <div className="p-4 bg-gray-100 text-center">
+              Document non disponible
+            </div>
+          )}
+          {/* <Document
+            file="../assets/teams/BROCHURE _AVICULTURE.pdf"
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadError={(error) => console.error('PDF load error:', error)}
+            loading={<div>Loading PDF...</div>}
+            error={<div>Failed to load PDF.</div>}
+          >
+            <Page pageNumber={1} width={800} />
+          </Document> */}
+
+        </div>
+      </Modal>
     </div>
   );
 };

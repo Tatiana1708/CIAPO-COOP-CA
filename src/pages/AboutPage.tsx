@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Award, ChevronRight, MapPin } from 'lucide-react';
 import SectionTitle from '../components/shared/SectionTitle';
-import { locations } from '../data/mockData';
+import { locations, missions } from '../data/mockData';
 
 const AboutPage: React.FC = () => {
   React.useEffect(() => {
@@ -98,6 +98,41 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <section className="py-16 bg-neutral-50">
+        <div className="container-custom">
+          <SectionTitle 
+            title="Nos Missions" 
+            subtitle="Des services complets pour le développement agricole"
+            centered
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {missions.map((mission, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-8 rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="rounded-full bg-primary-100 flex items-center justify-center mb-6">
+                  {/* <mission.icon size={32} className="text-primary-600" /> */}
+                  <img 
+                    src={mission.imageUrl} 
+                    alt={mission.title} 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{mission.title}</h3>
+                <p className="text-neutral-600">{mission.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       <section className="py-16 bg-neutral-50">
         <div className="container-custom">

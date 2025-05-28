@@ -1,4 +1,5 @@
 import { Program, NewsItem, Partner, Course, Product, Service, Location } from '../types';
+import {Target, BookOpen, ShoppingBag, Wrench } from 'lucide-react';
 import Aviculture from '../assets/elevage.jpg';
 import Agriculture from '../assets/agriculture.jpg';
 import Agroalimentaire from '../assets/transform_cacao.png';
@@ -20,6 +21,16 @@ import FAO from '../assets/FAO.jpeg';
 import BAD from '../assets/BAD.jpeg';
 import restau from '../assets/restau.jpeg';
 import irrigation from '../assets/systeme-irrigation.png';
+import gest_Agri from '../assets/compta_agricol.jpeg';
+import Techno from '../assets/technologie.jpg';
+import Prof from '../assets/dep_pro.jpg';
+import AviBrochure from '../assets/teams/BROCHURE_AVICULTURE.pdf';
+import GestBrochure from '../assets/teams/BROCHURE_GESTION_FINANCIERE_AGRICULTEURS.pdf';
+import Formation from '../assets/missions/formation.jpg';
+import Production from '../assets/missions/vente.png';
+import Projets from '../assets/missions/mont_projet.jpeg';
+import Phytosanitaires from '../assets/missions/phytosanit.jpeg';
+import Prestations from '../assets/missions/prestation.jpg';
 
 export const programs: Program[] = [
   {
@@ -29,7 +40,7 @@ export const programs: Program[] = [
     duration: '1 mois',
     cost: '70 000 FCFA',
     imageUrl: 'https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=600',
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: AviBrochure
   },
   {
     id: '2',
@@ -38,7 +49,7 @@ export const programs: Program[] = [
     duration: '1 mois',
     cost: '70 000 FCFA',
     imageUrl: Aviculture,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
   },
   {
     id: '3',
@@ -47,16 +58,16 @@ export const programs: Program[] = [
     duration: '1 mois',
     cost: '70 000 FCFA',
     imageUrl: Agriculture,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
   },
   {
     id: '4',
     title: 'Transformation Agroalimentaire',
-    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    description: 'Maîtrisez les techniques de transformation agroalimentaire pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
     duration: '1 mois',
     cost: '70 000 FCFA',
     imageUrl: Agroalimentaire,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
   },
   {
     id: '5',
@@ -65,7 +76,7 @@ export const programs: Program[] = [
     duration: '1 mois',
     cost: '70 000 FCFA',
     imageUrl: Pisculture,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
   },
   {
     id: '6',
@@ -74,7 +85,7 @@ export const programs: Program[] = [
     duration: '1 mois',
     cost: '260 000 FCFA',
     imageUrl: Comptabilité,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
   },
   {
     id: '7',
@@ -83,7 +94,7 @@ export const programs: Program[] = [
     duration: '12 mois',
     cost: '265 000 FCFA',
     imageUrl: Santé,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
   },
   {
     id: '8',
@@ -92,7 +103,7 @@ export const programs: Program[] = [
     duration: '12 mois',
     cost: '260 000 FCFA',
     imageUrl: Commerce,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: GestBrochure
   },
   {
     id: '9',
@@ -101,7 +112,7 @@ export const programs: Program[] = [
     duration: '12 mois',
     cost: '350 000 FCFA',
     imageUrl: Technologie,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
   },
   {
     id: '10',
@@ -110,7 +121,16 @@ export const programs: Program[] = [
     duration: '12 mois',
     cost: '265 000 FCFA',
     imageUrl: Professionnel,
-    pdfUrl: '../assets/teams/BROCHURE AVICULTURE F.pdf'
+    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
+  },
+  {
+    id: '11',
+    title: 'Gestion Financière pour Agriculteurs',
+    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
+    duration: '12 mois',
+    cost: '265 000 FCFA',
+    imageUrl: gest_Agri,
+    pdfUrl: GestBrochure
   },
 ];
 
@@ -186,20 +206,20 @@ export const partners: Partner[] = [
   {
     id: '4',
     name: 'Cohimms Anglo Saxon Universite Professionnelle De Douala',
-    description: 'Partenaire de formation universitaire',
+    description: 'Centre de formation professionnelle, partenaire reconnu par arrêté ministériel, prévoit d\'ouvrir une succursale dans le village d\'Ebolowa (Sud Cameroun). Conformément à la convention en cours entre les deux structures, l\'exclusivité des responsabilités et des charges sera confiée à la coopérative CIAPO',
     logoUrl: COHIMMSlogo,
     website: 'https://www.cohimms.org'
   },
   {
     id: '5',
     name: 'Société Camerounaises des Postes Télécommunications et Travaux Electrique (SCPTTE Sarl)',
-    description: 'Partenaire technique pour les installations électriques',
+    description: 'Partenaire technique pour la fourniture et installations électriques et travaux de télécommunications et marketing digital et construction des bâtiments et montage des appels d\'offres publics et privés ',
     logoUrl: SCPTTElogo,
     website: 'https://www.scpttesarl.org'
   },
   {
     id: '6',
-    name: 'Groupe Initiative comme des Agriculteurs de Yemyema\'a (GIC ABMY)',
+    name: 'Groupe des Agriculteurs Biologique  de Yemyema\'a (GIC ABMY)',
     description: 'Partenaire soutenant les projets agricoles ',
     logoUrl: GICAMBYlogo,
     website: 'https://www.gicamby.org'
@@ -207,7 +227,7 @@ export const partners: Partner[] = [
   {
     id: '7',
     name: 'Afripionnier Investissements Sarl (API)',
-    description: 'Partenaire financier pour les projets agricoles',
+    description: 'Partenaire pour les prestations de services en transport et logistique travaux publics et privés, bâtiments, énergie solaire, financement des projets, et distribution des produits diverses import-export ',
     logoUrl: APIlogo,
     website: 'https://www.apisarl.org'
   }
@@ -232,7 +252,7 @@ export const courses: Course[] = [
     level: 'Intermédiaire',
     duration: '6 semaines',
     instructor: 'Prof. Bakayoko Mamadou',
-    imageUrl: 'https://images.pexels.com/photos/6862157/pexels-photo-6862157.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: Aviculture,
     modules: 8,
     enrolledStudents: 85
   },
@@ -243,9 +263,53 @@ export const courses: Course[] = [
     level: 'Tous niveaux',
     duration: '5 semaines',
     instructor: 'Mme. Touré Fatou',
-    imageUrl: 'https://images.pexels.com/photos/6693655/pexels-photo-6693655.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: gest_Agri,
     modules: 7,
     enrolledStudents: 98
+  },
+  {
+    id: '4',
+    title: 'Formation en Santé Médicale',
+    description: 'Formation de base en santé préventive et gestes d\’urgence pour renforcer la résilience communautaire.',
+    level: 'Tous niveaux',
+    duration: '4 semaines',
+    instructor: 'Mme. ',
+    imageUrl: Santé,
+    modules: 4,
+    enrolledStudents: 8
+  },
+  {
+    id: '5',
+    title: 'Formation en Commerce Et Gestion',
+    description: 'Développer les compétences essentielles en création, gestion et suivi de petites activités économiques.',
+    level: 'Tous niveaux',
+    duration: '4 semaines',
+    instructor: 'M. ',
+    imageUrl: Commerce,
+    modules: 4,
+    enrolledStudents: 10
+  },
+  {
+    id: '6',
+    title: 'Formation en Technologie',
+    description: 'Intégrer les outils numériques dans la gestion, la communication et la productivité quotidienne.',
+    level: 'Tous niveaux',
+    duration: '4 semaines',
+    instructor: 'Mme. ',
+    imageUrl: Techno,
+    modules: 4,
+    enrolledStudents: 5
+  },
+  {
+    id: '7',
+    title: 'Formation en Département Professionnel',
+    description: 'Préparer efficacement l’insertion professionnelle ou le lancement d’un projet personnel viable.',
+    level: 'Tous niveaux',
+    duration: '4 semaines',
+    instructor: 'M. ',
+    imageUrl: Prof,
+    modules: 4,
+    enrolledStudents: 4
   }
 ];
 
@@ -373,5 +437,38 @@ export const locations: Location[] = [
     type: 'training-center',
     phone: '+237 652 498 313 / +237 621 752 020',
     email: 'cohimms@ciapo-coop-ca.org'
+  }
+];
+
+export const missions = [
+  {
+    icon: BookOpen,
+    imageUrl: Formation,
+    title: 'Formation',
+    description: 'Formation professionnelle et académique dans le secteur agricole'
+  },
+  {
+    icon: ShoppingBag,
+    imageUrl: Production,
+    title: 'Production et Commerce',
+    description: 'Production, commercialisation, achat et vente en gros et en détail de produits agricoles'
+  },
+  {
+    icon: Target,
+    imageUrl: Projets,
+    title: 'Montage de Projets',
+    description: 'Montage des projets et réalisations dans le secteur agricole'
+  },
+  {
+    icon: Wrench,
+    imageUrl: Phytosanitaires,
+    title: 'Services Phytosanitaires',
+    description: 'Prestations de services et entretien phytosanitaires'
+  },
+  {
+    icon: Wrench,
+    imageUrl: Prestations,
+    title: 'Prestations Services',
+    description: 'Prestations de services et entretien phytosanitaires'
   }
 ];

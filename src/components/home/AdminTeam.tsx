@@ -64,7 +64,7 @@ const AdminTeam: React.FC = () => {
     },
     {
       name: 'Mme. Kowssima Marly Yaya ',
-      role: 'Prestataire indépendante',
+      role: 'Partenaire Agronome',
       image: Yaya,
       bio: 'Ingénieur agronome option : Production Animale et Aquaculture Prestataire indépendante',
       email: 'technique@ciapo-coop-ca.org',
@@ -84,7 +84,7 @@ const AdminTeam: React.FC = () => {
     },
     {
       name: 'Mme. Florence Eba Metende',
-      role: 'Prestataire indépendante',
+      role: 'Partenaire Informaticienne',
       image: Florence,
       bio: 'Ingénieur Informaticienne/ Développeur',
       email: 'developpeur@ciapo-coop-ca.org',
