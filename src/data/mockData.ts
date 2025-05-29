@@ -7,7 +7,7 @@ import Pisculture from '../assets/piscicultre.jpg';
 import Comptabilité from '../assets/gestion.jpeg';
 import Santé from '../assets/sante.jpeg';
 import Commerce from '../assets/gestion.jpeg';
-import Technologie from '../assets/techno.jpeg';
+import Technologie from '../assets/technologie.jpg';
 import Professionnel from '../assets/professionnelle.jpg';
 import elevageImage from '../assets/elevage.jpg';
 import tomateImage from '../assets/tomates.jpg';
