@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import { motion } from 'framer-motion';
-import { ChevronRight, Calendar, Clock, Users, MapPin, CheckCircle2 } from 'lucide-react';
+import { ChevronRight, Calendar, Clock, Users, MapPin, CheckCircle2, Percent } from 'lucide-react';
 import { programs } from '../data/mockData';
 import Modal from '../components/programs/Modal';
 
@@ -16,12 +15,6 @@ const ProgramDetailPage: React.FC = () => {
   const { id } = useParams();
   const program = programs.find(p => p.id === id);
   const [showBrochure, setShowBrochure] = useState(false);
-  const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
-    setNumPages(numPages);
-  }
 
   React.useEffect(() => {
     if (program) {
@@ -90,16 +83,16 @@ const ProgramDetailPage: React.FC = () => {
               <span>{program.duration}</span>
             </div>
             <div className="flex items-center text-white">
-              <Clock size={20} className="mr-2" />
-              <span>35 heures/semaine</span>
+              <Percent size={20} className="mr-2" />
+              <span>{program.format}</span>
             </div>
             <div className="flex items-center text-white">
               <Users size={20} className="mr-2" />
-              <span>20 places disponibles</span>
+              <span>10 places disponibles</span>
             </div>
             <div className="flex items-center text-white">
               <MapPin size={20} className="mr-2" />
-              <span>Centre de formation Bingerville</span>
+              <span>Centre de formation Ebolowa</span>
             </div>
           </motion.div>
         </div>
@@ -115,20 +108,17 @@ const ProgramDetailPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold mb-6">Objectifs de la Formation</h2>
-                <ul className="space-y-4">
-                  {[
-                    "Maîtriser les techniques agricoles modernes",
-                    "Développer des compétences en gestion d'entreprise",
-                    "Comprendre les enjeux du marché agricole local",
-                    "Acquérir une expertise pratique sur le terrain"
-                  ].map((objective, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle2 size={20} className="text-primary-600 mr-3 mt-1 flex-shrink-0" />
-                      <span>{objective}</span>
-                    </li>
+                <h2 className="text-2xl font-bold mb-6">Public Cible</h2>
+                <div className="flex flex-wrap gap-2">
+                  {program.targetAudience?.map((audience, index) => (
+                    <span 
+                      key={index}
+                      className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm"
+                    >
+                      {audience}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </motion.div>
 
               <motion.div
@@ -139,35 +129,7 @@ const ProgramDetailPage: React.FC = () => {
               >
                 <h2 className="text-2xl font-bold mb-6">Programme Détaillé</h2>
                 <div className="space-y-6">
-                  {[
-                    {
-                      title: "Module 1: Introduction à l'Agriculture Moderne",
-                      duration: "2 semaines",
-                      topics: [
-                        "Fondamentaux de l'agriculture durable",
-                        "Analyse des sols et climat",
-                        "Planification des cultures"
-                      ]
-                    },
-                    {
-                      title: "Module 2: Techniques de Production",
-                      duration: "3 semaines",
-                      topics: [
-                        "Méthodes de culture optimisées",
-                        "Gestion de l'irrigation",
-                        "Protection des cultures"
-                      ]
-                    },
-                    {
-                      title: "Module 3: Gestion d'Entreprise Agricole",
-                      duration: "3 semaines",
-                      topics: [
-                        "Business plan agricole",
-                        "Gestion financière",
-                        "Marketing et vente"
-                      ]
-                    }
-                  ].map((module, index) => (
+                  {program.modules?.map((module, index) => (
                     <div key={index} className="bg-neutral-50 p-6 rounded-lg">
                       <div className="flex justify-between items-start mb-4">
                         <h3 className="text-xl font-semibold">{module.title}</h3>
@@ -175,8 +137,12 @@ const ProgramDetailPage: React.FC = () => {
                           {module.duration}
                         </span>
                       </div>
+                      <div className="mb-3">
+                        <p className="font-medium text-primary-600">Objectif:</p>
+                        <p>{module.objective}</p>
+                      </div>
                       <ul className="space-y-2">
-                        {module.topics.map((topic, i) => (
+                        {module.topics?.map((topic, i) => (
                           <li key={i} className="flex items-center">
                             <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
                             <span>{topic}</span>
@@ -186,6 +152,23 @@ const ProgramDetailPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
+              </motion.div>
+
+              <motion.div
+                className="mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-2xl font-bold mb-6">Livrables</h2>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {program.deliverables?.map((item, index) => (
+                    <li key={index} className="flex items-start bg-neutral-50 p-4 rounded-lg">
+                      <CheckCircle2 size={20} className="text-primary-600 mr-3 mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             </div>
 
@@ -223,9 +206,8 @@ const ProgramDetailPage: React.FC = () => {
                   </div>
                 </div>
 
-                
                 <div className="space-y-4 mb-6">
-                <p className="text-neutral-600">Avantages</p>
+                  <p className="text-neutral-600">Avantages</p>
                   <div className="flex items-center">
                     <CheckCircle2 size={18} className="text-primary-600 mr-3" />
                     <span>Assurance risque inclu</span>
@@ -240,11 +222,14 @@ const ProgramDetailPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <button className="button-primary w-full mb-4" >
+                <button className="button-primary w-full mb-4">
                   S'inscrire à la formation
                 </button>
                 
-                <button className="button-outline w-full" onClick={() => setShowBrochure(true)}>
+                <button 
+                  className="button-outline w-full" 
+                  onClick={() => setShowBrochure(true)}
+                >
                   Télécharger la brochure
                 </button>
               </div>
@@ -252,19 +237,14 @@ const ProgramDetailPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       <Modal
         isOpen={showBrochure}
         onClose={() => setShowBrochure(false)}
-        title="Brochure de Formation"
+        title={`Brochure: ${program.title}`}
       >
         <div className="aspect-[210/297] bg-white">
-          {program?.pdfUrl ? (
-            // <iframe
-            //   src={`https://docs.google.com/viewer?url=${encodeURIComponent("../assets/teams/BROCHURE_AVICULTURE.pdf")}&embedded=true`}
-            //   className="w-full h-full min-h-[600px] border-0"
-            //   title={`Brochure du programme: ${program.title || 'Document'}`}
-            //   loading="lazy"
-            // />
+          {program.pdfUrl ? (
             <iframe
               src={`${program.pdfUrl}`}
               className="w-full h-[600px]"
@@ -275,16 +255,6 @@ const ProgramDetailPage: React.FC = () => {
               Document non disponible
             </div>
           )}
-          {/* <Document
-            file="../assets/teams/BROCHURE _AVICULTURE.pdf"
-            onLoadSuccess={onDocumentLoadSuccess}
-            onLoadError={(error) => console.error('PDF load error:', error)}
-            loading={<div>Loading PDF...</div>}
-            error={<div>Failed to load PDF.</div>}
-          >
-            <Page pageNumber={1} width={800} />
-          </Document> */}
-
         </div>
       </Modal>
     </div>

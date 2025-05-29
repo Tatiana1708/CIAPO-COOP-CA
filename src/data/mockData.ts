@@ -24,8 +24,13 @@ import irrigation from '../assets/systeme-irrigation.png';
 import gest_Agri from '../assets/compta_agricol.jpeg';
 import Techno from '../assets/technologie.jpg';
 import Prof from '../assets/dep_pro.jpg';
-import AviBrochure from '../assets/teams/BROCHURE_AVICULTURE.pdf';
-import GestBrochure from '../assets/teams/BROCHURE_GESTION_FINANCIERE_AGRICULTEURS.pdf';
+import EntrepBrochure from '../assets/brochures/ENTREPRENEURIAT_AGRICOLE.pdf';
+import AviBrochure from '../assets/brochures/BROCHURE_AVICULTURE.pdf';
+import agriBrochure from '../assets/brochures/TRANSFORMATION_AGROALIMENTAIRE.pdf';
+import GestBrochure from '../assets/brochures/BROCHURE_GESTION_FINANCIERE_AGRICULTEURS.pdf';
+import transfBrochure from '../assets/brochures/TRANSFORMATION_AGROALIMENTAIRE.pdf';
+import pisiculBrochure from '../assets/brochures/FORMATION_PISCICULTURE_MODERNE.pdf';
+import gestFinBrochure from '../assets/brochures/FORMATION_COMPTABILITÉ_GESTION_AGRICOLE.pdf';
 import Formation from '../assets/missions/formation.jpg';
 import Production from '../assets/missions/vente.png';
 import Projets from '../assets/missions/mont_projet.jpeg';
@@ -36,20 +41,136 @@ export const programs: Program[] = [
   {
     id: '1',
     title: 'Entrepreneuriat Agricole',
-    description: 'Formation complète sur les aspects techniques et commerciaux de l\'entrepreneuriat agricole. Apprenez à gérer une exploitation rentable et durable.',
-    duration: '1 mois',
+    description: 'Formation intensive de 4 semaines combinant 60% de pratique et 40% de théorie appliquée pour acquérir les compétences essentielles de gestion d\'entreprise agricole.',
+    duration: '4 semaines',
     cost: '70 000 FCFA',
     imageUrl: 'https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=600',
-    pdfUrl: AviBrochure
+    pdfUrl: EntrepBrochure,
+    modules: [
+      {
+        title: 'Module 1: Lancer son projet agricole',
+        duration: 'Semaine 1',
+        objective: 'Clarifier l\'idée d\'entreprise et poser les bases solides',
+        topics: [
+          'Identification des opportunités agricoles',
+          'Étude simplifiée de marché local',
+          'Choix de la filière et structuration du projet',
+          'Connaissance des acteurs et dispositifs d\'accompagnement'
+        ]
+      },
+      {
+        title: 'Module 2: Techniques de production et gestion opérationnelle',
+        duration: 'Semaine 2',
+        objective: 'Connaître les fondamentaux techniques et organisationnels',
+        topics: [
+          'Choix et conduite d\'une spéculation',
+          'Planification des activités agricoles',
+          'Gestion de la main d\'œuvre et de la logistique',
+          'Gestion simplifiée des intrants et équipements'
+        ]
+      },
+      {
+        title: 'Module 3: Finances et outils de gestion',
+        duration: 'Semaine 3',
+        objective: 'Maîtriser les bases pour rentabiliser l\'entreprise',
+        topics: [
+          'Calcul des coûts de production',
+          'Fixation du prix de vente',
+          'Notions de seuil de rentabilité',
+          'Introduction à la gestion de trésorerie et tenue de cahiers de comptes'
+        ]
+      },
+      {
+        title: 'Module 4: Marketing, pitch & accès au financement',
+        duration: 'Semaine 4',
+        objective: 'Valoriser son projet et mobiliser les ressources',
+        topics: [
+          'Techniques de marketing rural et agricole',
+          'Construction d\'un argumentaire de vente',
+          'Élaboration d\'un mini business plan',
+          'Simulation de présentation à un bailleur ou investisseur'
+        ]
+      }
+    ],
+    deliverables: [
+      'Mini business plan',
+      'Plan d\'exploitation',
+      'Fiche de calcul',
+      'Présentation de projet',
+      'Certificat'
+    ],
+    targetAudience: [
+      'Agripreneurs',
+      'Jeunes diplômés',
+      'Porteurs de projets',
+      'Membres de coopératives'
+    ]
   },
   {
     id: '2',
     title: 'Aviculture Moderne',
     description: 'Apprenez les techniques modernes d\'élevage de volailles, de la gestion de l\'alimentation aux stratégies de commercialisation des œufs et poulets.',
-    duration: '1 mois',
+    duration: '4 semaines',
     cost: '70 000 FCFA',
     imageUrl: Aviculture,
-    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
+    pdfUrl: AviBrochure,
+    format: '80% pratique | 20% théorie de terrain',
+    targetAudience: [
+      'Jeunes en insertion',
+      'GIC',
+      'Coopératives',
+      'Techniciens'
+    ],
+    modules: [
+      {
+        title: 'Module 1: Mise en place de l\'élevage',
+        duration: 'Semaine 1',
+        objective: 'Installer un élevage sain, productif et rentable',
+        topics: [
+          'Choix du site, aménagement du poulailler',
+          'Choix des races : Cobb 500, Isa Brown',
+          'Matériel de base : abreuvoirs, mangeoires, litière',
+          'Réception des poussins, installation en couveuse'
+        ]
+      },
+      {
+        title: 'Module 2: Conduite de l\'élevage',
+        duration: 'Semaine 2',
+        objective: 'Suivre efficacement un cycle de production',
+        topics: [
+          'Alimentation par phase',
+          'Gestion de l\'eau, température, éclairage',
+          'Suivi poids, mortalité, sexage, vaccination'
+        ]
+      },
+      {
+        title: 'Module 3: Santé animale & biosécurité',
+        duration: 'Semaine 3',
+        objective: 'Prévenir les maladies, réduire les pertes',
+        topics: [
+          'Maladies fréquentes, plan de vaccination',
+          'Nettoyage, désinfection, gestion des fientes',
+          'Tenue des registres sanitaires, gestion des urgences'
+        ]
+      },
+      {
+        title: 'Module 4: Commercialisation et gestion',
+        duration: 'Semaine 4',
+        objective: 'Rendre l\'élevage rentable et évolutif',
+        topics: [
+          'Calcul des coûts de production',
+          'Planification des cycles',
+          'Accès au marché, emballage, marketing',
+          'Simulation de marché + pitch pro'
+        ]
+      }
+    ],
+    deliverables: [
+      'Fiche technique',
+      'Plan de vaccination',
+      'Mini business plan',
+      'Certificat'
+    ]
   },
   {
     id: '3',
@@ -58,25 +179,153 @@ export const programs: Program[] = [
     duration: '1 mois',
     cost: '70 000 FCFA',
     imageUrl: Agriculture,
-    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
+    pdfUrl: agriBrochure
   },
   {
     id: '4',
     title: 'Transformation Agroalimentaire',
     description: 'Maîtrisez les techniques de transformation agroalimentaire pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
-    duration: '1 mois',
+    duration: '8 semaines',
     cost: '70 000 FCFA',
     imageUrl: Agroalimentaire,
-    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
+    pdfUrl: transfBrochure,
+    format: '70% pratique | 30% théorie appliquée',
+    modules: [
+      {
+        title: 'Module 1: Apprendre en transformant',
+        duration: 'Semaine 1',
+        objective: 'Comprendre les fondamentaux tout en réalisant une première transformation',
+        topics: [
+          'Fabrication de gari et farine de manioc',
+          'Mise en place d\'un mini-laboratoire',
+          'Simulation de respect des normes d\'hygiène',
+          'Initiation à l\'analyse sensorielle'
+        ],
+      },
+      {
+        title: 'Module 2: Immersion technique dans les produits',
+        duration: 'Semaines 2 à 4',
+        objective: 'Acquérir les gestes métier sur plusieurs gammes de produits',
+        topics: [
+          'Produits végétaux',
+          'Transformation de fruits (jus, confitures, fruits secs)',
+          'Transformation de céréales (farines enrichies, bouillies instantanées)',
+          'Fabrication de biscuits ou beignets emballés',
+          'Produits animaux',
+          'Production laitière',
+          'Conservation longue durée des œufs',
+          'Techniques de viande/poisson (salaison, fumage, marinade)',
+          'Mini-projets',
+          'Transformation complète d\'un produit de A à Z',
+          'Étiquetage et calcul des coûts',
+          'Présentation finale du produit'
+        ]
+      },
+      {
+        title: 'Module 3: Emballage & Qualité produit',
+        duration: 'Semaines 5 à 6',
+        objective: 'Professionnaliser le conditionnement et la présentation',
+        topics: [
+          'Conception d\'emballages adaptés',
+          'Fabrication d\'étiquettes',
+          'Mise en sachet sous vide / mise en bocaux',
+          'Test de durée de vie'
+        ]
+      },
+      {
+        title: 'Module 4: Mon projet, mon entreprise',
+        duration: 'Semaines 7 à 8',
+        objective: 'Devenir transformateur indépendant ou chef d\'unité',
+        topics: [
+          'Élaboration d\'un plan de production',
+          'Rédaction d\'un mini business plan',
+          'Calcul des coûts et marges',
+          'Rencontres professionnelles'
+        ],
+        // postTraining: 'Coaching personnalisé pour 3 mois post-formation'
+      }
+    ],
+    deliverables: [
+      'Produit transformé + étiqueté',
+      'Mini business plan',
+      'Certificat de participation',
+      'Pitch enregistré (vidéo/audio)'
+    ],
+    targetAudience: [
+      'Jeunes agripreneurs',
+      'Membres de coopératives',
+      'Promoteurs agricoles',
+      'Techniciens piscicoles'
+    ],
   },
   {
     id: '5',
-    title: 'Pisculture Moderne',
-    description: 'Apprenez les techniques modernes d\'élevage, de la gestion de l\'alimentation aux stratégies de commercialisation.',
-    duration: '1 mois',
+    title: 'Pisciculture Moderne',
+    description: 'Apprenez les techniques modernes d\'élevage piscicole, de la gestion de l\'alimentation aux stratégies de commercialisation.',
+    duration: '4 semaines',
     cost: '70 000 FCFA',
     imageUrl: Pisculture,
-    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
+    pdfUrl: pisiculBrochure,
+    format: '70% pratique | 30% théorie appliquée',
+    targetAudience: [
+      'Jeunes agripreneurs',
+      'Membres de coopératives',
+      'Promoteurs agricoles',
+      'Techniciens piscicoles'
+    ],
+    modules: [
+      {
+        title: 'Module 1: Installation d\'un élevage piscicole',
+        duration: 'Semaine 1',
+        objective: 'Concevoir un site piscicole fonctionnel et durable',
+        topics: [
+          'Choix du site et construction des étangs/bassins (béton, bâches, terre)',
+          'Système d\'approvisionnement et d\'évacuation d\'eau',
+          'Sélection des espèces (Tilapia, Clarias)',
+          'Techniques d\'empoissonnement et acclimatation'
+        ]
+      },
+      {
+        title: 'Module 2: Conduite de l\'élevage',
+        duration: 'Semaine 2',
+        objective: 'Assurer une croissance optimale des poissons',
+        topics: [
+          'Alimentation : types d\'aliments, fréquence, ration journalière',
+          'Suivi de croissance et contrôle de la qualité de l\'eau',
+          'Entretien des bassins et infrastructures',
+          'Tri des poissons et gestion des densités'
+        ]
+      },
+      {
+        title: 'Module 3: Santé des poissons et biosécurité',
+        duration: 'Semaine 3',
+        objective: 'Réduire les pertes et garantir un élevage sain',
+        topics: [
+          'Principales maladies et mesures de prévention',
+          'Prélèvements et traitements de base',
+          'Pratiques de biosécurité et hygiène',
+          'Approche durable et respectueuse de l\'environnement'
+        ]
+      },
+      {
+        title: 'Module 4: Commercialisation et rentabilité',
+        duration: 'Semaine 4',
+        objective: 'Booster la productivité et faciliter l\'accès au marché',
+        topics: [
+          'Calendrier de production et planification des récoltes',
+          'Méthodes de récolte, conditionnement et transport',
+          'Circuits de commercialisation (marchés locaux, hôtels)',
+          'Élaboration d\'un mini business plan piscicole'
+        ]
+      }
+    ],
+    deliverables: [
+      'Fiche technique par espèce',
+      'Plan de production',
+      'Modèle de fiche de suivi',
+      'Mini business plan piscicole',
+      'Attestation de participation'
+    ]
   },
   {
     id: '6',
@@ -85,7 +334,7 @@ export const programs: Program[] = [
     duration: '1 mois',
     cost: '260 000 FCFA',
     imageUrl: Comptabilité,
-    pdfUrl: '../assets/teams/BROCHURE _AVICULTURE.pdf'
+    pdfUrl: GestBrochure
   },
   {
     id: '7',
@@ -125,13 +374,78 @@ export const programs: Program[] = [
   },
   {
     id: '11',
-    title: 'Gestion Financière pour Agriculteurs',
-    description: 'Maîtrisez les techniques de transformation des produits agricoles pour augmenter leur valeur ajoutée et prolonger leur durée de conservation.',
-    duration: '12 mois',
-    cost: '265 000 FCFA',
+    title: 'Comptabilité et Gestion Agricole',
+    description: 'Acquérez les compétences essentielles en gestion financière et comptabilité adaptées aux spécificités des activités agricoles et d\'élevage.',
+    duration: '4 semaines',
+    cost: '70 000 FCFA',
     imageUrl: gest_Agri,
-    pdfUrl: GestBrochure
-  },
+    pdfUrl: gestFinBrochure,
+    format: '60% pratique | 40% théorie appliquée',
+    targetAudience: [
+      'Agripreneurs',
+      'Chefs de coopératives',
+      'GIC',
+      'Jeunes entrepreneurs agricoles'
+    ],
+    modules: [
+      {
+        title: 'Module 1: Fondamentaux de la comptabilité',
+        duration: 'Semaine 1',
+        objective: 'Maîtriser les bases de l\'enregistrement comptable dans un cadre agricole',
+        topics: [
+          'Notions de base: actif, passif, charges, produits',
+          'Les pièces comptables: factures, reçus, bons de sortie',
+          'Initiation à la tenue du cahier de caisse',
+          'Principes d\'enregistrement: recettes et dépenses'
+        ]
+      },
+      {
+        title: 'Module 2: Outils de gestion simplifiée',
+        duration: 'Semaine 2',
+        objective: 'Savoir organiser et suivre les flux financiers d\'une activité',
+        topics: [
+          'Journal de caisse, fiche de stock, registre de ventes',
+          'Élaboration d\'un budget prévisionnel',
+          'Suivi de la trésorerie et des marges',
+          'Cas pratiques d\'activités agricoles et d\'élevage'
+        ]
+      },
+      {
+        title: 'Module 3: Analyse financière simplifiée',
+        duration: 'Semaine 3',
+        objective: 'Comprendre la rentabilité de son activité',
+        topics: [
+          'Calcul du coût de revient',
+          'Analyse de la marge brute et du seuil de rentabilité',
+          'Introduction aux tableaux de bord agricoles',
+          'Suivi des indicateurs clés (alimentation, rendement, main-d\'œuvre)'
+        ]
+      },
+      {
+        title: 'Module 4: Outils numériques et planification',
+        duration: 'Semaine 4',
+        objective: 'Digitaliser la gestion et planifier son développement',
+        topics: [
+          'Utilisation d\'Excel pour la comptabilité simplifiée',
+          'Initiation aux applications mobiles (e-Farm, KoBo)',
+          'Construction d\'un plan d\'affaires simple',
+          'Préparation à la recherche de financement'
+        ]
+      }
+    ],
+    deliverables: [
+      'Cahier de caisse modèle',
+      'Tableau de budget',
+      'Fiche de suivi financier',
+      'Mini business plan',
+      'Attestation de participation'
+    ],
+    // specialFeatures: [
+    //   'Focus sur les spécificités agricoles',
+    //   'Outils adaptés aux petites exploitations',
+    //   'Logiciels gratuits et accessibles'
+    // ]
+  }
 ];
 
 export const newsItems: NewsItem[] = [
@@ -324,8 +638,8 @@ export const products: Product[] = [
     imageUrl: elevageImage,
     seller: {
       id: '101',
-      name: 'Ferme Avicole Kouassi',
-      location: 'Bingerville',
+      name: 'Ferme Avicole',
+      location: 'Ebolowa',
       rating: 4.8
     },
     available: true
@@ -340,8 +654,8 @@ export const products: Product[] = [
     imageUrl: tomateImage,
     seller: {
       id: '102',
-      name: 'Coopérative Maraîchère d\'Anyama',
-      location: 'Anyama',
+      name: 'Coopérative Maraîchère',
+      location: 'Ebolowa',
       rating: 4.5
     },
     available: true
@@ -356,8 +670,8 @@ export const products: Product[] = [
     imageUrl: mielImage,
     seller: {
       id: '103',
-      name: 'Apiculteurs de Daloa',
-      location: 'Daloa',
+      name: 'Apiculteurs d\'Ebolowa',
+      location: 'Ebolowa',
       rating: 4.9
     },
     available: true

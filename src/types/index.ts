@@ -1,3 +1,10 @@
+export interface TrainingModule {
+  title: string;
+  duration: string;
+  objective: string;
+  topics: string[];
+}
+
 export interface Program {
   id: string;
   title: string;
@@ -6,6 +13,10 @@ export interface Program {
   cost: string;
   imageUrl: string;
   pdfUrl: string;
+  modules?: TrainingModule[];
+  deliverables?: string[];
+  targetAudience?: string[];
+  format?: string;
 }
 
 export interface NewsItem {
