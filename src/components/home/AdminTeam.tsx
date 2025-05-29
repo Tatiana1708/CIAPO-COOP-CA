@@ -46,7 +46,7 @@ const AdminTeam: React.FC = () => {
       name: 'M. Ndzana Franky Charly',
       role: 'Directeur Technique',
       image: Charly,
-      bio: 'Msc en Analyse Economie Rurale et Agricole /ingénieur agroevonomiste et enseignant à l\'université catholique d\'Afrique',
+      bio: 'Msc en Analyse Agroenvironnement /Ingénieur Agroeconomiste',
       email: 'technique@ciapo-coop-ca.org',
       phone: '+237 652 498 313',
       linkedin: 'https://linkedin.com',
