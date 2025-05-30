@@ -1,30 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { MapPin, Phone, Mail, Clock, ChevronRight, ChevronDown } from 'lucide-react';
 import { locations } from '../data/mockData';
 import gicambyLogo from '../assets/GICAMBY.png';
 import apiLogo from '../assets/API.png';
 import cohimmsLogo from '../assets/COHIMMS.png';
 import scptteLogo from '../assets/SCPTTE.png';
+import { ContactForm } from '../types';
 
 const ContactPage: React.FC = () => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
     phone: '',
     subject: '',
-    message: '',
+    message: ''
   });
+  const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
   React.useEffect(() => {
     document.title = 'Contact | CIAPO COOP-CA';
   }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      if (!form.current) {
+        throw new Error('Form reference not found');
+      }
+
+      const result = await emailjs.sendForm(
+        'service_nl6a40u',
+        'template_i3bl98o',
+        form.current,
+        'fSgzY4WNEIpstf8yy'
+      );
+
+      console.log('Email successfully sent!', result.text);
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -106,8 +138,20 @@ const ContactPage: React.FC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <h2 className="text-2xl font-bold mb-6">Envoyez-nous un message</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
+
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg">
+                    Message envoyé avec succès! Nous vous répondrons bientôt.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg">
+                    Une erreur s'est produite. Veuillez réessayer plus tard.
+                  </div>
+                )}
+
+                <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
@@ -123,7 +167,7 @@ const ContactPage: React.FC = () => {
                         required
                       />
                     </div>
-                    
+
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
                         Email
@@ -154,7 +198,7 @@ const ContactPage: React.FC = () => {
                         className="w-full px-4 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       />
                     </div>
-                    
+
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium text-neutral-700 mb-2">
                         Sujet
@@ -191,8 +235,20 @@ const ContactPage: React.FC = () => {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="button-primary">
-                    Envoyer le message
+                  <button
+                    type="submit"
+                    className={`button-primary ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Envoi en cours...
+                      </span>
+                    ) : 'Envoyer le message'}
                   </button>
                 </form>
               </motion.div>

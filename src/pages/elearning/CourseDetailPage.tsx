@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Clock, Users, BookOpen, ChevronRight, Play, CheckCircle2 } from 'lucide-react';
 import { courses } from '../../data/mockData';
+// import '../../components/elearning/VideoCoursePlayer.css';
 
 const CourseDetailPage: React.FC = () => {
   const { id } = useParams();
   const course = courses.find(c => c.id === id);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+  const closeVideoModal = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+    setIsModalOpen(false);
+    setIsPlaying(false);
+  };
 
   React.useEffect(() => {
     if (course) {
@@ -108,10 +126,63 @@ const CourseDetailPage: React.FC = () => {
             className="lg:col-span-1"
           >
             <div className="bg-white rounded-lg shadow-lg p-6 sticky top-24">
-              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-6">
-                <div className="bg-neutral-800 flex items-center justify-center">
-                  <Play size={48} className="text-white opacity-80" />
-                </div>
+              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-6 relative">
+                {!isPlaying ? (
+                  <div
+                    className="bg-neutral-800 flex items-center justify-center w-full h-full cursor-pointer"
+                    onClick={handlePlayClick}
+                  >
+                    <Play size={48} className="text-white opacity-80 hover:opacity-100 transition-opacity" />
+                  </div>
+                ) : (
+                  <video ref={videoRef} className="w-full h-full object-cover" controls autoPlay>
+                    <source src={course.videoUrl} type="video/mp4" />
+                    Votre navigateur ne prend pas en charge la lecture de vidéos.
+                  </video>
+                )}
+                {/* Floating bottom modal */}
+                {isModalOpen && (
+                  <div
+                    className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-end justify-center"
+                    onClick={closeVideoModal}
+                  >
+                    <div
+                      className="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-t-lg shadow-xl"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {/* Modal header with close button */}
+                      <div className="flex justify-between items-center p-4 border-b dark:border-gray-700">
+                        <h3 className="text-lg font-semibold dark:text-white">{course.title}</h3>
+                        <button
+                          className="text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white"
+                          onClick={closeVideoModal}
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      {/* Video player */}
+                      <div className="aspect-w-16 aspect-h-9">
+                        <video
+                          ref={videoRef}
+                          className="w-full h-full"
+                          controls
+                          autoPlay
+                        >
+                          <source src={course.videoUrl} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+                      {/* Description */}
+                      <div className="p-4 dark:text-gray-300">
+                        <p>{course.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="mb-6">

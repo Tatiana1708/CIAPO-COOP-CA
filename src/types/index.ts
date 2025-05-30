@@ -48,7 +48,19 @@ export interface Course {
   imageUrl: string;
   modules: number;
   enrolledStudents: number;
+  videoDuration: string;
+  thumbnail: string;
+  videoUrl: string;
 }
+
+// export type VideoCourse = {
+//   id: string;
+//   title: string;
+//   description: string;
+//   duration: string;
+//   thumbnail: string;
+//   videoUrl: string;
+// };
 
 export interface Product {
   id: string;
@@ -95,4 +107,12 @@ export interface Location {
   type: 'headquarters' | 'training-center' | 'marketplace';
   phone: string;
   email: string;
+}
+
+export interface ContactForm {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
 }

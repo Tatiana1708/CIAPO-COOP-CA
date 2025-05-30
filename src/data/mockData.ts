@@ -36,6 +36,8 @@ import Production from '../assets/missions/vente.png';
 import Projets from '../assets/missions/mont_projet.jpeg';
 import Phytosanitaires from '../assets/missions/phytosanit.jpeg';
 import Prestations from '../assets/missions/prestation.jpg';
+import Course1 from '../assets/video/ciapo coop-ca.mp4';
+
 
 export const programs: Program[] = [
   {
@@ -557,7 +559,10 @@ export const courses: Course[] = [
     instructor: 'Dr. Kouamé Akissi',
     imageUrl: 'https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=600',
     modules: 6,
-    enrolledStudents: 120
+    enrolledStudents: 120,
+    videoDuration: '2 hours | 15 lessons',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Course+Thumbnail',
+    videoUrl: Course1,
   },
   {
     id: '2',
@@ -568,7 +573,11 @@ export const courses: Course[] = [
     instructor: 'Prof. Bakayoko Mamadou',
     imageUrl: Aviculture,
     modules: 8,
-    enrolledStudents: 85
+    enrolledStudents: 85,
+    videoDuration: '2 hours | 15 lessons',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Course+Thumbnail',
+    videoUrl: Course1,
+
   },
   {
     id: '3',
@@ -579,7 +588,11 @@ export const courses: Course[] = [
     instructor: 'Mme. Touré Fatou',
     imageUrl: gest_Agri,
     modules: 7,
-    enrolledStudents: 98
+    enrolledStudents: 98,
+    videoDuration: '2 hours | 15 lessons',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Course+Thumbnail',
+    videoUrl: Course1,
+
   },
   {
     id: '4',
@@ -590,7 +603,10 @@ export const courses: Course[] = [
     instructor: 'Mme. ',
     imageUrl: Santé,
     modules: 4,
-    enrolledStudents: 8
+    enrolledStudents: 8,
+    videoDuration: '2 hours | 15 lessons',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Course+Thumbnail',
+    videoUrl: Course1,
   },
   {
     id: '5',
@@ -601,7 +617,10 @@ export const courses: Course[] = [
     instructor: 'M. ',
     imageUrl: Commerce,
     modules: 4,
-    enrolledStudents: 10
+    enrolledStudents: 10,
+    videoDuration: '2 hours | 15 lessons',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Course+Thumbnail',
+    videoUrl: Course1,
   },
   {
     id: '6',
@@ -612,7 +631,10 @@ export const courses: Course[] = [
     instructor: 'Mme. ',
     imageUrl: Techno,
     modules: 4,
-    enrolledStudents: 5
+    enrolledStudents: 5,
+    videoDuration: '2 hours | 15 lessons',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Course+Thumbnail',
+    videoUrl: Course1,
   },
   {
     id: '7',
@@ -623,7 +645,10 @@ export const courses: Course[] = [
     instructor: 'M. ',
     imageUrl: Prof,
     modules: 4,
-    enrolledStudents: 4
+    enrolledStudents: 4,
+    videoDuration: '2 hours | 15 lessons',
+    thumbnail: 'https://via.placeholder.com/800x450?text=Course+Thumbnail',
+    videoUrl: Course1,
   }
 ];
 
