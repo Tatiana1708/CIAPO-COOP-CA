@@ -50,7 +50,7 @@ const Header: React.FC = () => {
               <Logo />
               <div className="ml-3">
                 <span className="block font-heading font-bold text-xl">{getSiteName()}</span>
-                <span className="text-xs text-neutral-500">Formation & Entrepreneuriat Agricole</span>
+                <span className="text-xs text-neutral-500">Entrepreneuriat & Formation Agricole</span>
               </div>
             </Link>
           </div>
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-1">
             <ul className="flex space-x-1">
               <li><Link to="/" className={getNavLinkClass('/')}>Accueil</Link></li>
-              <li><Link to="/programs" className={getNavLinkClass('/programs')}>Nos Programmes</Link></li>
+              <li><Link to="/programs" className={getNavLinkClass('/programs')}>Nos Services</Link></li>
               <li><Link to="/news" className={getNavLinkClass('/news')}>Actualités</Link></li>
               <li><Link to="/about" className={getNavLinkClass('/about')}>À Propos</Link></li>
               <li><Link to="/contact" className={getNavLinkClass('/contact')}>Contact</Link></li>

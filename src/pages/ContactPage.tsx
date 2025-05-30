@@ -212,10 +212,10 @@ const ContactPage: React.FC = () => {
                         required
                       >
                         <option value="">Sélectionnez un sujet</option>
-                        <option value="formation">Information sur les formations</option>
-                        <option value="inscription">Inscription</option>
-                        <option value="partenariat">Proposition de partenariat</option>
-                        <option value="autre">Autre demande</option>
+                        <option value="Formation">Information sur les formations</option>
+                        <option value="Inscription">Inscription</option>
+                        <option value="Partenariat">Proposition de partenariat</option>
+                        <option value="Autre">Autre demande</option>
                       </select>
                     </div>
                   </div>

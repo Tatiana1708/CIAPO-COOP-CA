@@ -11,15 +11,23 @@ const Hero: React.FC = () => {
       </div>
       
       <div className="container-custom relative z-10 pb-20 lg:pb-32">
-        <div className="max-w-3xl text-white">
+        <div className="text-white">
           <motion.h1 
             className="text-4xl lg:text-6xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Formez-vous aux métiers de l'Agriculture moderne
+            Rejoignez-nous aux Salons des Métiers d'Avenir
           </motion.h1>
+          <motion.h4 
+            className="text-4xl lg:text-3xl font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            Technologie • Formation • Entrepreneuriat • Emploi
+          </motion.h4>
           
           <motion.p 
             className="text-lg lg:text-xl mb-8 text-neutral-100"
@@ -27,7 +35,9 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            CIAPO COOP-CA accompagne les jeunes entrepreneurs vers l'excellence agricole à travers des formations d'amélioration professionnelle, d'orientation en création d'entreprise, de prestations de services diversifiées et accès à l'emploi.
+            La Coopérative Internationale d'Amélioration Professionnelle et d'Orientation (CIAPO) vous invite à découvrir les opportunités qui façonneront votre avenir ! 
+            S'engage à accompagner la jeunesse vers l'excellence professionnelle en facilitant le montage de projets innovants, proposant des formations adaptées 
+            aux réalités du terrain, et créant des ponts stratégiques entre compétences et opportunités d'emploi.            
           </motion.p>
           
           <motion.div 

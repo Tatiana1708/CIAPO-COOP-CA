@@ -103,7 +103,7 @@ const AboutPage: React.FC = () => {
         <div className="container-custom">
           <SectionTitle 
             title="Nos Missions" 
-            subtitle="Des services complets pour le développement agricole"
+            subtitle="Des services complets pour le développement des métiers d'avenir"
             centered
           />
           
@@ -138,7 +138,7 @@ const AboutPage: React.FC = () => {
         <div className="container-custom">
           <SectionTitle 
             title="Notre Impact" 
-            subtitle="Des résultats concrets pour le développement agricole"
+            subtitle="Des résultats concrets pour le développement des métiers d'avenir"
             centered
           />
           
