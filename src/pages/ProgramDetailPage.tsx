@@ -4,7 +4,7 @@ import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import { motion } from 'framer-motion';
-import { ChevronRight, Calendar, Clock, Users, MapPin, CheckCircle2, Percent } from 'lucide-react';
+import { ChevronRight, Calendar, Clock, Users, MapPin, CheckCircle2, Percent, ArrowRight } from 'lucide-react';
 import { programs } from '../data/mockData';
 import Modal from '../components/programs/Modal';
 
@@ -225,6 +225,10 @@ const ProgramDetailPage: React.FC = () => {
                 <button className="button-primary w-full mb-4">
                   S'inscrire à la formation
                 </button>
+                <Link to="/contact" className="button bg-white text-primary-700 hover:bg-neutral-100">
+                  S'inscrire maintenant
+                  <ArrowRight size={18} className="ml-1" />
+                </Link>
                 
                 <button 
                   className="button-outline w-full" 
