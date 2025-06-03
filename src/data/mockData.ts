@@ -700,6 +700,38 @@ export const products: Product[] = [
       rating: 4.9
     },
     available: true
+  },
+  {
+    id: '4',
+    name: 'Cacao (Theobroma cacao)',
+    description: 'Cacao pur récolté dans le Sud (Ebolowa, Kribi, Djoum)',
+    price: 4000,
+    unit: 'kilo',
+    category: 'Produits transformés',
+    imageUrl: mielImage,
+    seller: {
+      id: '103',
+      name: 'Omniprésente dans le Sud',
+      location: 'Sud',
+      rating: 4.9
+    },
+    available: true
+  },
+  {
+    id: '5',
+    name: 'Miel Naturel',
+    description: 'Miel pur récolté dans les forêts du centre-ouest',
+    price: 4000,
+    unit: 'litre',
+    category: 'Produits transformés',
+    imageUrl: mielImage,
+    seller: {
+      id: '103',
+      name: 'Apiculteurs d\'Ebolowa',
+      location: 'Ebolowa',
+      rating: 4.9
+    },
+    available: true
   }
 ];
 

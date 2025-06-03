@@ -59,16 +59,19 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-1">
             <ul className="flex space-x-1">
               <li><Link to="/" className={getNavLinkClass('/')}>Accueil</Link></li>
-              <li><Link to="/programs" className={getNavLinkClass('/programs')}>Nos Services</Link></li>
-              <li><Link to="/news" className={getNavLinkClass('/news')}>Actualités</Link></li>
-              <li><Link to="/about" className={getNavLinkClass('/about')}>À Propos</Link></li>
+              <li><Link to="/about" className={getNavLinkClass('/about')}>A Propos De Nous </Link></li>
+              <li><Link to="/programs" className={getNavLinkClass('/programs')}>Programme De Formation D'amélioration Professionnelle Et D’orientation Agricole Dans Le Tas</Link></li>
+              <li><Link to="/programs" className={getNavLinkClass('/programs')}>Programme De Formation Professionnelle Universitaire </Link></li>
+              <li><Link to="/programs" className={getNavLinkClass('')}>Prestations De Services Divers </Link></li>
+              <li><Link to="/programs" className={getNavLinkClass('')}>Montage Des Projets Avec Accompagnement Stratégie Pour La Mises En Œuvre </Link></li>
               <li><Link to="/contact" className={getNavLinkClass('/contact')}>Contact</Link></li>
+              <li><Link to="/news" className={getNavLinkClass('/news')}>Suivez Nos Actualités</Link></li>
             </ul>
 
             <div className="border-l border-neutral-200 h-6 mx-2"></div>
             
             <div className="flex space-x-2">
-              {/* <Link to="/elearning" className="button-outline text-sm py-2 px-4">E-Learning</Link> */}
+              <Link to="/elearning" className="button-outline text-sm py-2 px-4">E-Learning</Link>
               <Link to="/marketplace" className="button-primary text-sm py-2 px-4">Marketplace</Link>
             </div>
           </div>
@@ -89,10 +92,13 @@ const Header: React.FC = () => {
         <div className="lg:hidden bg-white shadow-lg py-4 px-6 absolute w-full">
           <ul className="space-y-4">
             <li><Link to="/" className={`block ${getNavLinkClass('/')}`}>Accueil</Link></li>
-            <li><Link to="/programs" className={`block ${getNavLinkClass('/programs')}`}>Nos Programmes</Link></li>
-            <li><Link to="/news" className={`block ${getNavLinkClass('/news')}`}>Actualités</Link></li>
-            <li><Link to="/about" className={`block ${getNavLinkClass('/about')}`}>À Propos</Link></li>
+            <li><Link to="/about" className={`block ${getNavLinkClass('/about')}`}>À Propos De Nous</Link></li>
+            <li><Link to="/programs" className={`block ${getNavLinkClass('/programs')}`}>Programme De Formation D'amélioration Professionnelle Et D’orientation Agricole Dans Le Tas</Link></li>
+            <li><Link to="/programs" className={`block ${getNavLinkClass('/programs')}`}>Programme De Formation Professionnelle Universitaire </Link></li>
+            <li><Link to="/programs" className={`block ${getNavLinkClass('')}`}>Prestations De Services Divers</Link></li>
+            <li><Link to="/programs" className={`block ${getNavLinkClass('')}`}>Montage Des Projets Avec Accompagnement Stratégie Pour La Mises En Œuvre</Link></li>
             <li><Link to="/contact" className={`block ${getNavLinkClass('/contact')}`}>Contact</Link></li>
+            <li><Link to="/news" className={`block ${getNavLinkClass('/news')}`}>Suivez Nos Actualités</Link></li>
             
             <li className="pt-2 border-t border-neutral-200">
               <Link to="/elearning" className="block button-outline text-center mb-2">E-Learning</Link>

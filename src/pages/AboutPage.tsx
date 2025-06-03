@@ -44,7 +44,7 @@ const AboutPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              CIAPO COOP-CA est une institution dédiée à la formation des jeunes entrepreneurs agricoles et au développement du secteur agricole au Cameroun.
+              CIAPO-COOP-CA est une coopérative agropastorale qui accompagne les jeunes dans toutes ses dimensions.
             </motion.p>
           </div>
         </div>
@@ -59,16 +59,21 @@ const AboutPage: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl font-bold mb-6">Notre Mission</h2>
+              <h2 className="text-3xl font-bold mb-6">Qui somme nous?</h2>
               <p className="text-neutral-600 mb-6">
-                Nous nous engageons à transformer le secteur agricole en formant la prochaine génération d'entrepreneurs agricoles. Notre approche combine formation technique, accompagnement pratique et accès au marché.
+              CIAPO-COOP-CA est une coopérative agropastorale qui accompagne les jeunes dans toutes ses dimensions.              
+              </p>
+              <p className="text-neutral-600 mb-6">
+              Nous offrons des cours en vidéo conférence et sur site           
               </p>
               <ul className="space-y-4">
                 {[
-                  "Former des agriculteurs qualifiés et innovants",
-                  "Promouvoir l'agriculture durable et rentable",
-                  "Faciliter l'accès aux marchés agricoles",
-                  "Créer un réseau d'entraide entre agriculteurs"
+                  "Formation pratique en agropastoral (élevage, cultures, gestion de projets).",
+                  "Services conseils : Orientation professionnelle, implantation de projets, suivi technique.",
+                  "Production agricole : Cacao, soja, banane, tomate, manioc, maïs, arachides, palmier à huile, produits maraîchers, céréales, etc.",
+                  "Élevage & pisciculture : Aviculture, apiculture, aquaculture, escargots, etc. Protection de l’environnement et agroécologie.",
+                  "Lutter contre le chômage, l’exode rural et les risques sociaux (délinquance, grossesses précoces, etc.).",
+                  "Renforcer l’autonomie financière pour soutenir les familles et briser le cycle de la pauvreté."
                 ].map((item, index) => (
                   <li key={index} className="flex items-center">
                     <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
