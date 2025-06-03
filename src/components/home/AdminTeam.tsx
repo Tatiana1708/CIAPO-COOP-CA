@@ -27,7 +27,7 @@ const AdminTeam: React.FC = () => {
       role: ' Présidente Du Conseil De Surveillance',
       image: marie,
       bio: 'Présidente De Surveillance Conseil D\'administration à CIAPO ',
-      email: 'technique@ciapo-coop-ca.org',
+      email: 'ciapocoopca@gmail.com',
       phone: '+237 652 498 313',
       linkedin: 'https://linkedin.com',
        location: 'Ebolowa, Sud Cameroun'
