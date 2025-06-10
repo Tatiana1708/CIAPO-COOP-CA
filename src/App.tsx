@@ -19,6 +19,7 @@ import StudentDashboardPage from './pages/elearning/StudentDashboardPage';
 import NewsPage from './pages/NewsPage';
 import NewsDetailPage from './pages/NewsDetailPage';
 import VideoCoursePlayer from './components/elearning/VideoCoursePlayer';
+import RegistrationPage from './pages/RegistrationPage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/marketplace" element={<MarketplacePage />} />
             <Route path="/programs" element={<ProgramsPage />} />
             <Route path="/programs/:id" element={<ProgramDetailPage />} />
+            <Route path="/programs/:id/register" element={<RegistrationPage />} />
             <Route path="/marketplace/products" element={<ProductListPage />} />
             <Route path="/marketplace/products/:id" element={<ProductDetailPage />} />
             <Route path="/marketplace/sellers/:id" element={<SellerProfilePage />} />

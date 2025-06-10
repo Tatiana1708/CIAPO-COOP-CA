@@ -222,12 +222,11 @@ const ProgramDetailPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <button className="button-primary w-full mb-4">
+                <Link 
+                  to={`/programs/${program.id}/register`}
+                  className="button-primary w-full mb-4 text-center block"
+                >
                   S'inscrire à la formation
-                </button>
-                <Link to="/contact" className="button bg-white text-primary-700 hover:bg-neutral-100">
-                  S'inscrire maintenant
-                  <ArrowRight size={18} className="ml-1" />
                 </Link>
                 
                 <button 
