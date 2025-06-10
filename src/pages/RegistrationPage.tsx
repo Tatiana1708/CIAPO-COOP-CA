@@ -112,10 +112,10 @@ const RegistrationPage: React.FC = () => {
 
        // Send email using EmailJS
        await emailjs.send(
-        'service_nl6a40u',
+        'service_rti6nkb',
         'template_i8lhe8f',
         inscriptionForm,
-        'fSgzY4WNEIpstf8yy'
+        'SFv4Qh_fWABmxvAD9'
       );
 
       setSubmitStatus('success');
@@ -443,25 +443,16 @@ const RegistrationPage: React.FC = () => {
                           required
                         >
                           <option value="">Sélectionner une région</option>
-                          <option value="lagunes">Lagunes</option>
-                          <option value="haut-sassandra">Haut-Sassandra</option>
-                          <option value="savanes">Savanes</option>
-                          <option value="vallee-du-bandama">Vallée du Bandama</option>
-                          <option value="moyen-comoe">Moyen-Comoé</option>
-                          <option value="18-montagnes">18 Montagnes</option>
-                          <option value="lacs">Lacs</option>
-                          <option value="zanzan">Zanzan</option>
-                          <option value="bas-sassandra">Bas-Sassandra</option>
-                          <option value="denguele">Denguélé</option>
-                          <option value="nzi-comoe">N'zi-Comoé</option>
-                          <option value="marahoue">Marahoué</option>
-                          <option value="sud-comoe">Sud-Comoé</option>
-                          <option value="worodougou">Worodougou</option>
-                          <option value="sud-bandama">Sud-Bandama</option>
-                          <option value="agneby">Agnéby</option>
-                          <option value="belier">Bélier</option>
-                          <option value="fromager">Fromager</option>
-                          <option value="moyen-cavally">Moyen-Cavally</option>
+                          <option value="Adamaoua">Adamaoua</option>
+                          <option value="Centre">Centre</option>
+                          <option value="Est">Est</option>
+                          <option value="Extreme-nord">Extrême-Nord</option>
+                          <option value="Littoral">Littoral</option>
+                          <option value="Nord">Nord</option>
+                          <option value="Nord-ouest">Nord-Ouest</option>
+                          <option value="Ouest">Ouest</option>
+                          <option value="Sud">Sud</option>
+                          <option value="Sud-ouest">Sud-Ouest</option>
                         </select>
                       </div>
                     </div>

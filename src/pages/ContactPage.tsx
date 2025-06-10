@@ -36,10 +36,10 @@ const ContactPage: React.FC = () => {
       }
 
       const result = await emailjs.sendForm(
-        'service_nl6a40u',
+        'service_rti6nkb',
         'template_i3bl98o',
         form.current,
-        'fSgzY4WNEIpstf8yy'
+        'SFv4Qh_fWABmxvAD9'
       );
 
       console.log('Email successfully sent!', result.text);
