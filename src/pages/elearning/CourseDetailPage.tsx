@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Clock, Users, BookOpen, ChevronRight, Play, CheckCircle2 } from 'lucide-react';
 import { courses } from '../../data/mockData';
-// import '../../components/elearning/VideoCoursePlayer.css';
 
 const CourseDetailPage: React.FC = () => {
   const { id } = useParams();
@@ -190,9 +189,12 @@ const CourseDetailPage: React.FC = () => {
                 <p className="text-neutral-600">Accès complet au cours</p>
               </div>
 
-              <button className="button-primary w-full mb-4">
+              <Link 
+                to={`/elearning/courses/${course.id}/player`}
+                className="button-primary w-full mb-4 text-center block"
+              >
                 Commencer le cours
-              </button>
+              </Link>
 
               <div className="space-y-4">
                 <div className="flex items-center">
