@@ -19,6 +19,7 @@ import {
   Settings
 } from 'lucide-react';
 import { courses } from '../../data/mockData';
+import video1 from '../../assets/video/ciapo coop-ca.mp4'; // Adjusted path
 
 
 const CoursePlayerPage: React.FC = () => {
@@ -202,16 +203,16 @@ const CoursePlayerPage: React.FC = () => {
       <div className="flex h-[calc(100vh-140px)]">
         {/* Video Player */}
         <div className="flex-1 flex flex-col">
-          <div className="relative bg-black flex-1">
+          <div className="relative bg-black w-full min-h-[500px]">
             <video
               ref={videoRef}
-              className="w-full h-80 object-contain"
+              className="absolute inset-0 w-full h-full"
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}
               poster={course.imageUrl}
             >
               {/* <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /> */}
-              <source src="../../assets/video/ciapo coop-ca.mp4" type="video/mp4" />
+              <source src={video1} type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.
             </video>
 
