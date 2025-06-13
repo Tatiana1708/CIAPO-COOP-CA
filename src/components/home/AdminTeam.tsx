@@ -11,6 +11,7 @@ import Frederic from '../../assets/teams/Frederic.png';
 import Fadi from '../../assets/teams/Fadi.png';
 import Boris from '../../assets/teams/BORIS.png';
 import Florence from '../../assets/teams/FLORENCE.png';
+import Bell from '../../assets/teams/Bell.png';
 
 const AdminTeam: React.FC = () => {
   const team = [
@@ -113,6 +114,16 @@ const AdminTeam: React.FC = () => {
       phone: '+237 691 918 168',
       linkedin: 'https://linkedin.com',
        location: 'Douala, Littoral Cameroun'
+    },
+    {
+      name: 'Mme. Romane Brigitte Bell',
+      role: 'Gestionnaire restaurant et patisserie',
+      image: Bell,
+      bio: 'Expert du restaurant et boulangerie international',
+      email: 'ciapocoopca@gmail.com',
+      phone: '+237 ',
+      linkedin: 'https://linkedin.com',
+       location: 'Yaounde, Centre Cameroun'
     }
   ];
 
