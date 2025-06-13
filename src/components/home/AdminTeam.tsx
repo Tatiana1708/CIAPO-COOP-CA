@@ -7,6 +7,8 @@ import Charly from '../../assets/teams/CHARLY.png';
 import marie from '../../assets/teams/MARIE.png';
 import Nickson from '../../assets/teams/NICKSON.jpeg';
 import Yaya from '../../assets/teams/YAYA.png';
+import Frederic from '../../assets/teams/Frederic.png';
+import Fadi from '../../assets/teams/Fadi.png';
 import Boris from '../../assets/teams/BORIS.png';
 import Florence from '../../assets/teams/FLORENCE.png';
 
@@ -71,6 +73,26 @@ const AdminTeam: React.FC = () => {
       phone: '+237 652 498 313',
       linkedin: 'https://linkedin.com',
        location: 'Douala, Littoral Cameroun'
+    },
+    {
+      name: 'M. MISSINAI Frédéric ',
+      role: 'Chef Service',
+      image: Frederic,
+      bio: 'Ingénieur de conception en production végétale ',
+      email: 'technique@ciapo-coop-ca.org',
+      phone: '+237 652 498 313',
+      linkedin: 'https://linkedin.com',
+       location: 'Garoua, Nord Cameroun'
+    },
+    {
+      name: 'Mme. Fadi Haman ',
+      role: 'Directrice Commerciale',
+      image: Fadi,
+      bio: 'Ingénieur De Conception Agronome, Spécialité: Économie Agricole Et Management Des Entreprises (EAME)',
+      email: 'technique@ciapo-coop-ca.org',
+      phone: '+237 652 498 313',
+      linkedin: 'https://linkedin.com',
+       location: 'Ebolowa, Sud Cameroun'
     },
     {
       name: 'M. Ndongo Mve Andre Boris',
