@@ -11,11 +11,11 @@ const ProgramHighlights: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container-custom">
-        <SectionTitle 
-          title="Nos Programmes de Formation" 
-          subtitle="Des formations complètes pour réussir dans l'agriculture entrepreneuriale"
-          centered
-        />
+      <SectionTitle
+      title="Prestations de Services & Séminaires de Formation"
+      subtitle="Des ateliers pratiques, des formations à domicile et chez l'apprenant, pour développer vos compétences et réussir dans l'agriculture entrepreneuriale."
+      centered
+    />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {programs.map((program, index) => (
