@@ -9,9 +9,14 @@ import Santé from '../assets/sante.jpeg';
 import Commerce from '../assets/gestion.jpeg';
 import Technologie from '../assets/technologie.jpg';
 import Professionnel from '../assets/professionnelle.jpg';
-import elevageImage from '../assets/elevage.jpg';
+import elevageImage from '../assets/poules.jpeg';
+import pommesImage from '../assets/pommes.jpeg';
 import tomateImage from '../assets/tomates.jpg';
 import mielImage from '../assets/miel.jpg';
+import cacaoImage from '../assets/cacao.jpg';
+import plantainImage from '../assets/plantain.png';
+import maniocImage from '../assets/manioc.jpg';
+import maisImage from '../assets/mais.jpg';
 import COHIMMSlogo from '../assets/COHIMMS.png';
 import SCPTTElogo from '../assets/SCPTTE.png';
 import GICAMBYlogo from '../assets/GICAMBY.png';
@@ -727,6 +732,22 @@ export const products: Product[] = [
   },
   {
     id: '2',
+    name: 'pomme de terre bio',
+    description: 'Pommes de terre cultivées sans produits chimiques',
+    price: 2000,
+    unit: 'kg',
+    category: 'Légumes',
+    imageUrl: pommesImage,
+    seller: {
+      id: '102',
+      name: 'Coopérative Maraîchère',
+      location: 'Ebolowa',
+      rating: 4.5
+    },
+    available: true
+  },
+  {
+    id: '8',
     name: 'Tomates Bio',
     description: 'Tomates cultivées sans pesticides chimiques',
     price: 1500,
@@ -764,7 +785,7 @@ export const products: Product[] = [
     price: 4000,
     unit: 'kilo',
     category: 'Produits transformés',
-    imageUrl: '',
+    imageUrl: cacaoImage,
     seller: {
       id: '103',
       name: 'Omniprésente dans le Sud',
@@ -780,7 +801,7 @@ export const products: Product[] = [
     price: 4000,
     unit: 'kilo',
     category: 'Produits transformés',
-    imageUrl: '',
+    imageUrl: plantainImage,
     seller: {
       id: '103',
       name: 'Apiculteurs d\'Ebolowa',
@@ -796,7 +817,7 @@ export const products: Product[] = [
     price: 4000,
     unit: 'kilo',
     category: 'Produits transformés',
-    imageUrl: '',
+    imageUrl: maniocImage,
     seller: {
       id: '103',
       name: 'Apiculteurs d\'Ebolowa',
@@ -806,13 +827,13 @@ export const products: Product[] = [
     available: true
   },
   {
-    id: '6',
+    id: '7',
     name: 'Maïs',
     description: 'Semences hybrides, engrais NPK + urée',
     price: 4000,
     unit: 'kilo',
     category: 'Produits transformés',
-    imageUrl: '',
+    imageUrl: maisImage,
     seller: {
       id: '103',
       name: 'Apiculteurs d\'Ebolowa',
